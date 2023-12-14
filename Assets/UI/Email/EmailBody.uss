@@ -1,0 +1,99 @@
+#bodycontainer{
+	background-color: rgb(235, 235, 235);
+	flex-grow: 1;
+    align-items: stretch;
+	width:100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+}
+#subjectcontainer{
+	width: 100%;
+	height: 50px;
+	max-height: 50px;
+	border-width: 0px 0px 10px 0px;
+	border-color: rgb(0, 0, 0);
+}
+
+.unity-label{
+        margin:0px;
+        -unity-font-definition: url("GillSansSDF.asset");
+}
+
+#subject{
+	height: 100%;
+	-unity-text-align: middle-left;
+	padding-left: 50px;
+	font-size: 26px;
+	-unity-font-style: bold;
+	padding-top: 1.5%;
+}
+
+#emailaddresscontainer{
+	max-height: 100px;
+	align-items: stretch;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+#addressbox{
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding: 20px;
+	width: 80%;
+}
+#replybuttoncontainer{
+	padding: 20px;
+}
+#tolabel{
+	height: 50%;
+	font-size: 16px;
+	-unity-text-align: middle-left;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+#fromlabel{
+	height: 100%;
+	font-size: 18px;
+	-unity-text-align: middle-left;
+	overflow: hidden;
+    text-overflow: ellipsis;
+	align-self: flex-start;
+	max-width:80%;
+}
+#fromrow{
+	height: 50%;
+	flex-grow: 1;
+	flex-shrink: 1;
+    align-items: stretch;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+#fromaddress{
+	flex-grow: 1;
+	flex-shrink: 1;
+	height: 100%;
+	font-size: 14px;
+	-unity-text-align: middle-left;
+	overflow: hidden;
+    text-overflow: ellipsis;
+	align-self: stretch;
+	margin-left: 20px;
+}
+#emailbody{
+	padding: 0px 50px 0px 50px;
+}
+#text{
+	margin:0px;
+	padding:0px;
+	font-size: 16px;
+	white-space:normal;
+	color: rgb(0, 0, 0);
+}
+#replytext{
+	font-size: 16px;
+	white-space:normal;
+	color: rgb(150, 150, 150);
+}

@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Email/EmailEntry.uss?fileID=7433441132597879392&amp;guid=bc7cc95433ca21a438efbda3a4a9f96b&amp;type=3#EmailEntry" />
+    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="emailcontainer">
+        <ui:VisualElement name="picturecontainer">
+            <ui:VisualElement name="pictureoverlay">
+                <ui:VisualElement name="picture" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="textcontainer" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Example Sender" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sender" />
+            <ui:Label tabindex="-1" text="Test subject, should not be seen in the actual game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="subject" />
+        </ui:VisualElement>
+        <ui:VisualElement name="timecontainer">
+            <ui:Label tabindex="-1" text="00:00" parse-escape-sequences="true" display-tooltip-when-elided="true" name="time" />
+        </ui:VisualElement>
+    </ui:Button>
+</ui:UXML>

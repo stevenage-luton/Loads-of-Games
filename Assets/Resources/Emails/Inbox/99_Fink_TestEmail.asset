@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 99_Fink_TestEmail
+  m_EditorClassIdentifier: 
+  EmailUserName: Fink Stinkler
+  EmailAddress: finkstinker@midway.systems.net
+  RecipientAddress: clydethunderpants@midway.admin.net
+  Subject: Email Test
+  EmailBody: 'Hey Clyde,
+
+
+    Just sending this to test the new email system before
+    we roll it out across the station.
+
+
+    If you get this, good news, the system
+    works.
+
+
+    Cheers,
+
+
+    Fink'
+  time: 12:01
+  PortraitImage: {fileID: 21300000, guid: dd52f3ff99aa15345bee5ea1fafc2cf8, type: 3}
+  reply: {fileID: 11400000, guid: abed9450a975e2a4393ee47d4a98e381, type: 2}

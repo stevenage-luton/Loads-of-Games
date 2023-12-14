@@ -1,0 +1,162 @@
+    #background {
+        flex-grow: 1;
+        align-items: stretch;
+        justify-content: flex-start;
+        background-color: rgb(235, 235, 235);
+    }
+    #topbar {
+        flex-shrink:0;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(235, 235, 235);
+        border-width: 10px;
+        border-color: rgb(0, 0, 0);
+        max-height: 100px;
+    }
+    #secondbar {
+        flex-shrink:0;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: rgb(235, 235, 235);
+        border-width: 0px 10px 0px 10px;
+        border-color: rgb(0, 0, 0);
+        max-height: 100px;
+    }
+   /* #secondbar:hover {
+        background-color: rgb(200, 200, 200);
+
+    }*/
+    #maindiv {
+        flex-grow: 1;
+        align-items: stretch;
+        justify-content: flex-start;
+        background-color: rgb(235, 235, 235);
+        border-width: 10px;
+        border-color: rgb(0, 0, 0);
+        flex-direction: row;
+    }
+    #emailname {
+        flex-grow: 1;
+        margin-left: 50px;
+        -unity-text-align: middle-left;
+        font-size: 26px;
+        -unity-font-definition: url("GillSansSDF.asset");
+        -unity-font-style: bold;
+    }
+    #functionlist {
+        flex-grow: 1;
+        align-items: stretch;
+        justify-content: flex-start;
+        background-color: rgb(235, 235, 235);
+        border-width: 0px 10px 0px 0px;
+        border-color: rgb(0, 0, 0);
+        width: 10%;
+    }
+    #emaillist {
+        flex-grow: 1;
+        align-items: stretch;
+        justify-content: flex-start;
+        border-width: 0px 10px 0px 0px;
+        background-color: rgb(235, 235, 235);
+        border-color: rgb(0, 0, 0);
+        width: 30%;
+    }
+    #emailcontainer {
+        flex-grow: 1;
+        align-items: stretch;
+        justify-content: flex-start;
+        background-color: rgb(235, 235, 235);
+        width: 60%;
+    }
+    .unity-button {
+         -unity-font-definition: url("GillSansSDF.asset");
+         border-width: 5px 5px 5px 5px;
+         border-color: rgb(0, 0, 0);
+         background-color: rgb(235, 235, 235);
+         font-size: 26px;
+         -unity-font-style: bold;
+         -unity-text-align: middle-left;
+         padding-right: 5%;
+         padding-left: 5%;
+         margin-left: 5%;
+         margin: 10px 2% 10px 2%;
+    }
+    .selected{
+        background-color: rgb(180, 180, 180);
+    }
+    .unselected{
+        background-color: rgb(235, 235, 235);
+    }
+    .unselected:hover {
+         background-color: rgb(200, 200, 200);
+    }
+    .tab{
+
+    }
+    #loginname{
+        flex-grow: 1;
+        margin-right: 50px;
+        -unity-text-align: middle-right;
+        font-size: 26px;
+        -unity-font-definition: url("GillSansSDF.asset");
+        -unity-font-style: bold;
+    }
+
+    #unity-slider{
+        margin:0px;
+        padding:10px 0px 10px 0px;
+        border-width:0px;
+        background-color: rgb(225, 225, 225);
+    }
+#unity-dragger{
+    background-color: rgb(0, 0, 0);
+
+    border-width:5px;
+    padding:0px;
+    border-color: rgb(0, 0, 0);
+    border-radius:8px;
+}
+#unity-dragger-border{
+    margin:0px;
+    padding:0px;
+    width:0px;
+    height:0px;
+    border-width:0px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(200, 200, 200);
+}
+
+#unity-tracker{
+    visibility: hidden;
+    border-width:0px;
+    margin:0px;
+    padding:0px;
+}
+
+#unity-high-button{
+    display:none;
+    visibility:hidden;
+    height: 0px;
+    width: 0px;
+    border-width:0px;
+    margin:0px;
+    padding:0px;
+}
+
+#unity-low-button{
+    display:none;
+    height: 0px;
+    width: 0px;
+    border-width:0px;
+    margin:0px;
+    padding:0px;
+    border-width:0px;
+}
+
+.unity-scroller--low-button{
+    height: 0px;
+    border-width:0px;
+}
+

@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Email/EmailBody.uss?fileID=7433441132597879392&amp;guid=4021b4603f9a39b4abf862acf87af373&amp;type=3#EmailBody" />
+    <ui:VisualElement name="bodycontainer" style="flex-grow: 1;">
+        <ui:VisualElement name="subjectcontainer" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="subject" />
+        </ui:VisualElement>
+        <ui:VisualElement name="emailaddresscontainer" style="flex-grow: 1;">
+            <ui:VisualElement name="addressbox" style="flex-grow: 1;">
+                <ui:VisualElement name="fromrow">
+                    <ui:Label tabindex="-1" text="From: Test Long Name Sender Yeah" parse-escape-sequences="true" display-tooltip-when-elided="true" name="fromlabel" enable-rich-text="true" />
+                    <ui:Label tabindex="-1" text="&lt;noreply@bsolutions.org&gt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="fromaddress" enable-rich-text="true" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="To:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="tolabel" />
+            </ui:VisualElement>
+            <ui:VisualElement name="replybuttoncontainer" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="emailbody" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="replytext">
+                <ui:Label tabindex="-1" text="Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Morbi ven" parse-escape-sequences="true" display-tooltip-when-elided="true" name="text" />
+            </ui:Label>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
