@@ -13,5 +13,7 @@ public class EmailData : ScriptableObject
     public string time = "09:00";
     public Sprite PortraitImage;
 
+    public bool hasReply = false;
+
     public EmailData reply;
 }

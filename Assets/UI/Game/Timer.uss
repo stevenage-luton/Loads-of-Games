@@ -1,0 +1,43 @@
+
+
+
+.unity-progress-bar__progress {
+    height: 10px;
+    background-color: black;
+    border-radius: 15px;
+    margin:0px;
+    align-items:flex-start;
+    justify-content:center;
+    flex-grow:1;
+}
+
+.unity-progress-bar__container{
+    min-height: 20px;
+    border-width: 0px;
+}
+
+.unity-progress-bar__background{
+    height: 20px;
+    padding:0px;
+    border-width: 5px;
+    justify-content:center;
+    background-color: rgba(0, 0, 0,0);
+    border-color:black;
+    border-radius: 25px;
+}
+
+.unity-progress-bar__title{
+    display:none;
+    border-width: 0px;
+}
+
+.unity-progress-bar__title-container{
+    height: 20px;
+    padding:0px;
+    border-width: 0px;
+}
+
+.unity-progress-bar{
+    margin:0px;
+    height: 50px;
+}

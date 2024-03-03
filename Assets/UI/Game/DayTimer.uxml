@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Game/Timer.uss?fileID=7433441132597879392&amp;guid=e5e0b214e91b1da4f8185942b867c445&amp;type=3#Timer" />
+    <ui:ProgressBar value="10" high-value="60" />
+</ui:UXML>

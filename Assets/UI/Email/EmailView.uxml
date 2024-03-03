@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Email/EmailMainView.uss?fileID=7433441132597879392&amp;guid=4bd06e7efe8cae04cb72c748bdf30806&amp;type=3#EmailMainView" />
-    <ui:VisualElement name="background" style="flex-grow: 1; align-items: stretch; justify-content: flex-start; min-width: auto; min-height: auto; align-self: auto;">
+    <ui:VisualElement name="background">
         <ui:VisualElement name="topbar" style="flex-grow: 1;">
             <ui:Label name="emailname" text="Nicrozoft iMail Client" />
             <ui:Label tabindex="-1" text="Logged in as: Clyde Thunderpants" parse-escape-sequences="true" display-tooltip-when-elided="true" name="loginname" />
@@ -13,7 +13,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="maindiv" style="flex-grow: 1;">
             <ui:ListView focusable="true" name="emaillist" />
-            <ui:VisualElement name="emailcontainer" style="flex-grow: 1;" />
+            <ui:VisualElement name="emailcontainer" style="flex-grow: 1; align-self: auto; justify-content: flex-start;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

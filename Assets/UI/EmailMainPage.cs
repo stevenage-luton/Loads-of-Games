@@ -6,6 +6,12 @@ using UnityEngine.UIElements;
 
 public class EmailMainPage : MonoBehaviour
 {
+
+    private UIDocument document;
+
+    [SerializeField]
+    private Camera mainCamera;
+
     private Button inbox;
     private Button sent;
     private Button drafts;
@@ -44,7 +50,9 @@ public class EmailMainPage : MonoBehaviour
 
     private void Start()
     {
-        root = GetComponent<UIDocument>().rootVisualElement;
+        
+
+        root = document.rootVisualElement;     
 
         emaillist = root.Q<ListView>("emaillist");
         emailcontainer = root.Q<VisualElement>("emailcontainer");
@@ -75,6 +83,39 @@ public class EmailMainPage : MonoBehaviour
         GameEventSystem.instance.onReadyToSendTrigger += UpdateReadyToSend;
 
         audioPlayer = GetComponent<AudioSource>();
+
+
+    }
+
+    private void OnEnable()
+    {
+        document = GetComponent<UIDocument>();
+
+        document.panelSettings.SetScreenToPanelSpaceFunction((Vector2 screenPos) => {
+            var invalidPosition = new Vector2(float.NaN, float.NaN);
+
+            var cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+            Debug.Log(cameraRay);
+
+            Debug.DrawRay(cameraRay.origin, cameraRay.direction * 100, Color.magenta);
+
+            RaycastHit UIhit;
+            if (!Physics.Raycast(cameraRay, out UIhit, 100f, LayerMask.GetMask("ScreenUI")))
+            {
+                Debug.Log($"Invalid Position");
+                Debug.Log(UIhit.collider);
+                return invalidPosition;
+            }
+
+            Vector2 uvForPixel = UIhit.textureCoord;
+
+            uvForPixel.y = 1 - uvForPixel.y;
+            uvForPixel.x *= this.document.panelSettings.targetTexture.width;
+            uvForPixel.y *= this.document.panelSettings.targetTexture.height;
+
+            return uvForPixel;
+        });
     }
 
     public void InboxClicked(ClickEvent evt)
@@ -142,8 +183,8 @@ public class EmailMainPage : MonoBehaviour
         inboxEmails = new List<EmailData>();
         sentEmails = new List<EmailData>();
 
-        inboxEmails.AddRange(Resources.LoadAll<EmailData>("Emails/Inbox"));
-        sentEmails.AddRange(Resources.LoadAll<EmailData>("Emails/Sent"));
+        inboxEmails.AddRange(Resources.LoadAll<EmailData>("Emails/Day1/Inbox"));
+        sentEmails.AddRange(Resources.LoadAll<EmailData>("Emails/Day1/Sent"));
     }
 
     void FillEmailList(List<EmailData> listtoLoad)
@@ -227,7 +268,7 @@ public class EmailMainPage : MonoBehaviour
         currentEmail = data;
 
 
-        if (TabIsCurrentlySelected(inbox))
+        if (TabIsCurrentlySelected(inbox) && data.hasReply)
         {
             buttonContainer = emailcontainer.Q<VisualElement>("replybuttoncontainer");
             var replyButton = m_ReplySendButton.Instantiate();
@@ -258,9 +299,10 @@ public class EmailMainPage : MonoBehaviour
             return;
         }
 
+        emailcontainer.Clear();
+
         EmailData replyData = currentEmail.reply;
 
-        emailcontainer.Clear();
 
         var replyBody = m_BodyEntryTemplate.Instantiate();
         var replyBodyEntryLogic = new EmailBodyTemplateController();
@@ -271,21 +313,22 @@ public class EmailMainPage : MonoBehaviour
         emailcontainer.Add(replyBody);
         replyEmailTextLabel = emailcontainer.Q<Label>("text");
 
+
         if (TabIsCurrentlySelected(inbox))
         {
             buttonContainer = emailcontainer.Q<VisualElement>("replybuttoncontainer");
-            var replyButton = m_ReplySendButton.Instantiate();
-            var replyButtonLogic = new ReplyButtonController();
+            var sendButton = m_ReplySendButton.Instantiate();
+            var sendButtonLogic = new ReplyButtonController();
 
-            replyButton.userData = replyButtonLogic;
+            sendButton.userData = sendButtonLogic;
 
-            replyButtonLogic.SetVisualElement(replyButton);
+            sendButtonLogic.SetVisualElement(sendButton);
 
-            replyButtonLogic.SetButtonLabelText("Send");
+            sendButtonLogic.SetButtonLabelText("Send");
 
             //replyButtonLogic.replyButton.RegisterCallback<ClickEvent>(replyButtonLogic.ButtonClick);
 
-            buttonContainer.Add(replyButton);
+            buttonContainer.Add(sendButton);
         }
         audioPlayer.PlayOneShot(mouseClick);
         Debug.Log("Reply Button Was Clicked!");
@@ -296,6 +339,7 @@ public class EmailMainPage : MonoBehaviour
         if (readyToSend)
         {
             emailcontainer.Clear();
+            //currentEmail.hasReply = false;
             sentEmails.Insert(0, currentEmail.reply);
             Debug.Log("Send Button Was Clicked!");
             currentEmail = null;
