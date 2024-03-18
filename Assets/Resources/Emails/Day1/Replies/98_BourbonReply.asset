@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
   m_Name: 98_BourbonReply
   m_EditorClassIdentifier: 
-  EmailUserName: Clyde Thunderpants
-  EmailAddress: clydethunderpants@midway.admin.net
-  RecipientAddress: shipping@bsolutions.net
+  EmailUser: {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: db41f7bcaa8fc8b4bafdbca1b2325802, type: 2}
   Subject: 'RE: Order #BS12-11625-DR'
   EmailBody: 'Greetings Mr. Luton,
 
@@ -28,41 +28,9 @@ MonoBehaviour:
     for any inconvenience,
 
 
-    Clyde Thunderpants
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    d
-
-
-    Test'
+    Clyde Thunderpants'
   time: 12:21
   PortraitImage: {fileID: 21300000, guid: de18abed97215ad4f87f9d62712e54eb, type: 3}
   hasReply: 0
+  replied: 0
   reply: {fileID: 0}

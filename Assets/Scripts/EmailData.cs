@@ -1,12 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu] //This adds an entry to the **Create** menu
+[CreateAssetMenu]
 public class EmailData : ScriptableObject
 {
-    public string EmailUserName;
-    public string EmailAddress;
-    public string RecipientAddress;
+    public EmailUser EmailUser;
+    public List<EmailUser> Recipient;
     public string Subject;
     [TextArea(10, 100)]
     public string EmailBody;
@@ -14,6 +15,8 @@ public class EmailData : ScriptableObject
     public Sprite PortraitImage;
 
     public bool hasReply = false;
+
+    public bool replied = false;
 
     public EmailData reply;
 }

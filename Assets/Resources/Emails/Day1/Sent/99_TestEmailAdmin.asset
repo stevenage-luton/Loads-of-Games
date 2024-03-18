@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
   m_Name: 99_TestEmailAdmin
   m_EditorClassIdentifier: 
-  EmailUserName: Clyde Thunderpants
-  EmailAddress: clydethunderpants@midway.admin.net
-  RecipientAddress: admin@midway.systems.net
+  EmailUser: {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 12c004485fc040148947b0807e24ce1a, type: 2}
   Subject: Server Test
   EmailBody: 'Test email to make sure everything''s working.
 
@@ -22,4 +22,6 @@ MonoBehaviour:
     Test test.'
   time: 12:05
   PortraitImage: {fileID: 21300000, guid: de18abed97215ad4f87f9d62712e54eb, type: 3}
+  hasReply: 0
+  replied: 0
   reply: {fileID: 0}

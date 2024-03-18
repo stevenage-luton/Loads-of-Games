@@ -32,9 +32,16 @@ public class EmailBodyTemplateController
     public void SetBodyData(EmailData emailData)
     {
         SubjectLabel.text = emailData.Subject;
-        FromLabel.text = "From: " + emailData.EmailUserName;
-        FromAddress.text = "<" + emailData.EmailAddress + ">";
-        ToLabel.text = "To: " + emailData.RecipientAddress;
+        FromLabel.text = "From: " + emailData.EmailUser.EmailUserName;
+        FromAddress.text = "<" + emailData.EmailUser.EmailAddress + ">";
+
+        string toString = "To: ";
+        foreach (EmailUser user in emailData.Recipient)
+        {
+            toString += user.EmailAddress + ",";
+        }
+
+        ToLabel.text = toString;
         TextLabel.text = emailData.EmailBody;
     }
 
@@ -43,7 +50,12 @@ public class EmailBodyTemplateController
         SubjectLabel.text = replyData.Subject;
         FromLabel.text = "From: Clyde Thunderpants";
         FromAddress.text = "<clydethunderpants@midway.admin.net>";
-        ToLabel.text = "To: " + replyData.RecipientAddress;
+        string toString = "To: ";
+        foreach (EmailUser user in replyData.Recipient)
+        {
+            toString += user.EmailAddress + ",";
+        }
+        ToLabel.text = toString;
         TextLabel.text = "";
         ReplyText.text = replyData.EmailBody;
     }

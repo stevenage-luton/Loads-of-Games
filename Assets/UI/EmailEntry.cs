@@ -27,7 +27,7 @@ public class EmailListEntryController
 
     public void SetEmailData(EmailData emailData)
     {
-        SenderLabel.text = emailData.EmailUserName;
+        SenderLabel.text = emailData.EmailUser.EmailUserName;
         SubjectLabel.text = emailData.Subject;
         Picture.style.backgroundImage = new StyleBackground(emailData.PortraitImage);
         TimeLabel.text = emailData.time;
