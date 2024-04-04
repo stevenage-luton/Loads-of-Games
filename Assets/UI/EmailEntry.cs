@@ -29,7 +29,7 @@ public class EmailListEntryController
     {
         SenderLabel.text = emailData.EmailUser.EmailUserName;
         SubjectLabel.text = emailData.Subject;
-        Picture.style.backgroundImage = new StyleBackground(emailData.PortraitImage);
+        Picture.style.backgroundImage = new StyleBackground(emailData.EmailUser.PortraitImage);
         TimeLabel.text = emailData.time;
     }
 }

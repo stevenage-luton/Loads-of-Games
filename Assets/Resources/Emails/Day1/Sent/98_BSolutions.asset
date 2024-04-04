@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 98_BSolutions
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: db41f7bcaa8fc8b4bafdbca1b2325802, type: 2}
+  Subject: 'RE: Late shipment'
+  EmailBody: "Apologies Mr. Luton,\r\n\r\nI've followed this up with Shipping & Receiving,
+    and apparently this was caused by a manifest issue. Our copy has an incorrect
+    certificate-it\u2019s marked to go out on next months\u2019 launch cycle.\r\n\r\nApologies
+    for the inconvenience,\r\n\r\nClyde Thunderpants"
+  time: 15:29
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: []
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

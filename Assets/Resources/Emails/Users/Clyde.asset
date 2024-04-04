@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmailUserName: Clyde Thunderpants
   EmailAddress: clydethunderpants@admin.meridian.net
+  PortraitImage: {fileID: 21300000, guid: c8620dd7facb3d3498948c875c7165e1, type: 3}

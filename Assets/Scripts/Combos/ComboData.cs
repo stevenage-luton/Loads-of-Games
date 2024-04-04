@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Animations/Combo Data")]
 public class ComboData : ScriptableObject
 {
     public AnimationData TorsoPosition;
     public AnimationData ArmsPosition;
     public AnimationData LegsPosition;
 
-    public float StamRegenModifier;
+    public float StamRegenModifier = 1;
 
-    public float DrainModifier;
+    public float DrainModifier = 1;
 }

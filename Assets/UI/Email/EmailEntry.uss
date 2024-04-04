@@ -12,6 +12,7 @@
         margin:0px;
         padding: 10px;
         width: 100%;
+        color: rgb(27, 27, 27);
 
     }
     #emailcontainer:hover{
@@ -34,7 +35,7 @@
     #pictureoverlay {
         flex-grow: 1;
         align-items: stretch;
-        background-image: url("../../Resources/frownman.png");
+        background-image: url("../../Resources/Emails/Users/Pictures/frownman.png");
         width: 70px;
         height: 70px;
         min-width: 70px;
@@ -48,7 +49,7 @@
         min-width:100%;
         min-height: 100%;
         background-image: url("../../Resources/Circle.png");
-                -unity-background-image-tint-color: rgb(235, 235, 235);
+        -unity-background-image-tint-color: rgb(235, 235, 235);
     }
     .unity-label{
         margin:0px;

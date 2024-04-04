@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 60_JaftReply1
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 1bbde91c54d574349bd42e64d84ea5ea, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: 'RE:RE: The Labs'
+  EmailBody: "Greetings Mr. Thunderpants,\r\n\r\nThank you for investigating this
+    issue. Your response time was adequately brisk. We were able to open the affected
+    lab without much downtime.\r\n\r\nI take issue with the insinuation that I was
+    the one who raised the idea of \u201CDeath Fire\u201D as a possible cause for
+    the issue with the Bunsen burner. I think tensions in the room were very high
+    at the time, I was simply agreeing that it might be a <i>possibility</i> when
+    the theory was raised by one of my assistants (I can\u2019t remember who exactly).\r\n\r\nRegardless,
+    thank you for getting to the bottom of this before Clark and his Curse Squad
+    goons came down to smash everything with hammers. This time at least. \r\n\r\nColdest
+    Regards,\r\n\r\nJaft Morris,\r\n------------------------------------------------------------\r\nSenior
+    Research Technologist, Meridian Station\r"
+  time: 17:36
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: {fileID: 0}
+  threadTime: 0
+  minTime: 5
+  maxTime: 30

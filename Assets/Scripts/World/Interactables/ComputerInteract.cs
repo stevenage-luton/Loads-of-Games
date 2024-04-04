@@ -20,9 +20,10 @@ public class ComputerInteract : Interactable
         GameEventSystem.instance.ComputerInteractTrigger();
         audioPlayer.PlayOneShot(sitDownClip);
     }
-    public override string OnHover()
+    public override void OnHover()
     {
-        return "access computer";
+        base.OnHover();
+
     }
 
     private void PlayStandUpSound()

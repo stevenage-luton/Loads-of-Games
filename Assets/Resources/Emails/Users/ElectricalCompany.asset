@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609c36a4ae5a1b440b643994d666927a, type: 3}
+  m_Name: ElectricalCompany
+  m_EditorClassIdentifier: 
+  EmailUserName: Fukt Microelectronics
+  EmailAddress: exports@fukt.com
+  PortraitImage: {fileID: 21300000, guid: 0584f170ca0b4d745b99d5f088b19d50, type: 3}

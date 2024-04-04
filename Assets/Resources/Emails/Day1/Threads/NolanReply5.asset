@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: NolanReply5
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 7f868c1946d39f14aac058a605056c3d, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  - {fileID: 11400000, guid: 687601ef438c2dc46a17152124afb783, type: 2}
+  Subject: 'Thread: Possible Ghost?'
+  EmailBody: oh
+  time: 13:49
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: []
+  threadTime: 20
+  minTime: 0
+  maxTime: 0

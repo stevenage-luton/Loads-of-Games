@@ -30,7 +30,11 @@ MonoBehaviour:
 
     Clyde Thunderpants'
   time: 12:21
-  PortraitImage: {fileID: 21300000, guid: de18abed97215ad4f87f9d62712e54eb, type: 3}
   hasReply: 0
   replied: 0
   reply: {fileID: 0}
+  nextInThread:
+  - {fileID: 11400000, guid: a6c938150e0762d41a4be6c850e756d8, type: 2}
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

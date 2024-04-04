@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
   m_Name: 99_FinkEmailReply
   m_EditorClassIdentifier: 
-  EmailUserName: Clyde Thunderpants
-  EmailAddress: clydethunderpants@meridian.admin.net
-  RecipientAddress: finkstinker@meridian.systems.net
+  EmailUser: {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: b6e5e44844639d84fa381289e943b80e, type: 2}
   Subject: 'RE: Email Test'
   EmailBody: 'Hey Fink,
 
@@ -24,6 +24,11 @@ MonoBehaviour:
 
     Clyde'
   time: 12:05
-  PortraitImage: {fileID: 21300000, guid: de18abed97215ad4f87f9d62712e54eb, type: 3}
   hasReply: 0
+  replied: 0
   reply: {fileID: 0}
+  nextInThread:
+  - {fileID: 11400000, guid: f1b399726dad7454196c9691eca7ce59, type: 2}
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

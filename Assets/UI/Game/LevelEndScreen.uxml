@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Game/DayEnd.uss?fileID=7433441132597879392&amp;guid=40a0c44233842554db033e901a05fe93&amp;type=3#DayEnd" />
-    <ui:VisualElement name="background" style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1;">
+    <ui:VisualElement name="background" style="justify-content: center;">
+        <ui:VisualElement style="flex-grow: 0; flex-shrink: 0;">
             <ui:Label tabindex="-1" text="The work day ends" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dayEndMessage" />
             <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EmailsAnswered" />
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;">
-            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EndDayButton" style="align-items: stretch; flex-direction: column; justify-content: flex-end; width: 50%; align-self: center;" />
+        <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; margin-top: 5%;">
+            <ui:Button text="Click to begin day 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EndDayButton" style="align-items: stretch; flex-direction: column; justify-content: flex-end; width: 15%; align-self: center; flex-shrink: 0; flex-grow: 0; min-width: 300px; max-width: 25%;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 55_BourbonEmail1
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: db41f7bcaa8fc8b4bafdbca1b2325802, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: 'URGENT: Order #BS12-11625-DR'
+  EmailBody: 'Dear Mr Thunderpants,
+
+
+    Order #BS12-11625-DR was shipped from our
+    warehouse this morning, however we''ve not recieved an automated receipt from
+    your department to confirm.
+
+
+    Can you get back to us about this ASAP.
+
+
+    Regards,
+
+
+    Stevenage
+    Luton
+
+
+    Shipping Executive, Bourbon Solutions'
+  time: 17:41
+  hasReply: 1
+  replied: 0
+  reply: {fileID: 11400000, guid: bda3482f8f121a34cab7c371711cf3a7, type: 2}
+  nextInThread: {fileID: 0}
+  threadTime: 0
+  minTime: 85
+  maxTime: 100

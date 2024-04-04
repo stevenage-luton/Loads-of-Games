@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 56_LateReply
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: b3cc3d31d046d6349bdef88b49c9de47, type: 2}
+  Subject: 'RE: Fink is late?'
+  EmailBody: "Hey,\r\n\r\nNot heard anything yet. I agree though, that is strange.\r\n\r\nPresumably
+    management has already logged his absence, so there\u2019s not much I can do
+    for you. \r\n\r\nRegards,\r\n\r\nClyde\r"
+  time: 09:00
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread:
+  - {fileID: 11400000, guid: 4d866f72a2b7cad45b3dd256bf9e1a82, type: 2}
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

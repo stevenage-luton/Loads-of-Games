@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class DeskManAnimationController : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    Animator m_animator;
+
+    [SerializeField]
+    List<AnimationData> m_torsoAnimations;
+    [SerializeField]
+    List<AnimationData> m_armAnimations;
+    [SerializeField]
+    List<AnimationData> m_legAnimations;
     void Start()
     {
-        
+        m_animator = GetComponent<Animator>();
+        m_animator.Play("Slouch/SlouchLegs/HangingHands");
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmailUserName: '"Large Juice" Geoff'
   EmailAddress: geoffstapler@imail.net
+  PortraitImage: {fileID: 21300000, guid: 2381751b3706c904e91bf4cf4543d54b, type: 3}

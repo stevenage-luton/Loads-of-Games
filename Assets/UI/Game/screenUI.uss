@@ -6,3 +6,15 @@
 	margin-left: 80px;
 	margin-right: 80px;
 }
+
+#ScreenContainer{
+	position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+	align-items: stretch;
+	align-content: stretch;
+	display: flex;
+	flex-direction: column;
+}

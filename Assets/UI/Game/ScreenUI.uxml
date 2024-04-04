@@ -1,5 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="DayTimer" src="project://database/Assets/UI/Game/DayTimer.uxml?fileID=9197481963319205126&amp;guid=bb21597a398e40d419ad6cc7d1398eef&amp;type=3#DayTimer" />
     <Style src="project://database/Assets/UI/Game/screenUI.uss?fileID=7433441132597879392&amp;guid=9c0292afd076a2b4883176230a36ed76&amp;type=3#screenUI" />
-    <ui:Instance template="DayTimer" name="DayTimer" />
+    <ui:VisualElement name="ScreenContainer" style="flex-grow: 1;">
+        <ui:Instance template="DayTimer" name="DayTimer" />
+    </ui:VisualElement>
 </ui:UXML>

@@ -70,12 +70,34 @@ public class GameEventSystem : MonoBehaviour
 
     }
 
-    public event Action onDayBegin;
-    public void DayBeginTrigger()
+    public event Action<int> onDayBegin;
+    public void DayBeginTrigger(int day)
     {
         if (onDayBegin != null)
         {
-            onDayBegin.Invoke();
+            onDayBegin.Invoke(day);
+        }
+
+    }
+
+    public event Action<EmailData> midDayEmailRecieve;
+
+    public void RecieveEmail(EmailData data)
+    {
+        if (midDayEmailRecieve != null)
+        {
+            midDayEmailRecieve.Invoke(data);
+        }
+
+    }
+
+    public event Action<EmailData> awaitNextEmailInChain;
+
+    public void WaitForEmailReply(EmailData data)
+    {
+        if (awaitNextEmailInChain != null)
+        {
+            awaitNextEmailInChain.Invoke(data);
         }
 
     }

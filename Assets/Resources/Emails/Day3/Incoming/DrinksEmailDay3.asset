@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: DrinksEmailDay3
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 1af0ee941ebae9b47a60e4d773320bd7, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: Admin Team Drinks?
+  EmailBody: 'Hey Clyde,
+
+
+    Me, Hans, and the rest of the Admin Team are going
+    to the station bar (not gonna use its actual name, it''s dumb) after work. Was
+    wondering if you were coming?
+
+
+    Esme Crepes,
+
+
+    <b>Email Responder-To-er
+    / Station Administration </b>'
+  time: 09:00
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 11400000, guid: ac03caa10b9029149974944b05b6ed17, type: 2}
+  nextInThread: []
+  threadTime: 0
+  minTime: 180
+  maxTime: 210

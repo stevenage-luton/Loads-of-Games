@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: TherapyInbox
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 7d04ab51179a1b94cb0565e8d8442f92, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: Your automated therapy transcript is here!
+  EmailBody: "Hello Customer #200192!\n\nThank you for using our services. In compliance
+    with current data protection regulation, we are providing you with a transcript
+    of your conversation with our automated therapy service. We hope you enjoy using
+    Glinbo Health's Automated Language Model Therapy for all your mental health needs
+    in the future.\n\n<b>Glinbo Health | Generally Practitioning Health Contractors
+    | No Insurance required </b>\n\n\n<i><size=24>Transcript:</size></i>\n\n<size=16>\n<b>AI
+    Construct \u2018Doctor Baumer\u2019 [not a licensed medical practitioner]:</b>
+    <i>Hello there, CLYDE THUNDERPANTS, I understand that you are having problems
+    with: Mental Health. What is the reason for your call today? </i>\n\n<b>Patient:
+    CLYDE THUNDERPANTS:</b> <i>I think there\u2019s something wrong with me. I feel
+    really dissatisfied with my life and I don\u2019t even understand why. Is this
+    normal? Is what I\u2019m feeling normal to feel?</i>\n\n<b>DB:</b> <i>Oh dear,
+    CLYDE THUNDERPANTS, that sounds terrible. I am not a licensed medical professional.
+    It sounds like you are feeling: SAD. </i>\n\n<b>Patient:</b> <i>No, not sad.
+    I don\u2019t think I feel sad. I feel\u2026 stuck? Like my life isn\u2019t really
+    going anywhere. I\u2019m not really good at anything and my job is answering
+    emails all day. I don\u2019t really have any hobbies or goals for myself. I feel
+    exhausted; like a used match. Like I\u2019m already dead.</i>\n\n<b>DB:</b> <i>How
+    SAD would you say you feel, on a scale of one to three?</i>\n\n<b>Patient:</b>
+    <i>NO- no. I said I\u2019m not sad. I just feel like my life is over. I don\u2019t
+    get why. I\u2019m so tired of feeling this way. Why can\u2019t I just be satisfied?
+    Why can\u2019t I just be normal?</i>\n\n<b>DB:</b> <i>I understand. You\u2019re
+    not feeling SAD. I am not a licensed medical professional. It sounds like you\u2019re
+    feeling: NOT HAPPY.</i>\n\n<b>Patient:</b> <i>What a joke. What a terrible idea
+    this was. What\u2019s the point in talking to a robot with three responses to
+    anything I actually say?</i>\n\n<b>DB:</b> <i>It sounds like you\u2019d like
+    to access our Premium Service: Glinbo Mental Health Plus. If you enter your credit
+    information, I can transfer your call to one of our many trained mental health
+    professionals: all of which are 100% guaranteed to be a real, authentic human.</i>\n\n<b>DB:</b>
+    <i>Would you like me to transfer your call?</i>\n\n<b>Patient:</b> <i>I guess.</i>\n\n<b>DB:</b>
+    <i>Please Enter Payment Information. </i>\n\n<b>Patient:</b>[REDACTED PAYMENT
+    INFORMATION]\n\n<b>DB:</b> <i>Payment Accepted. Please hold while I transfer
+    your call\u2026</i>\n\n<b>Glinbo Health+ Licensed Mental Health Professional
+    Doctor J. Cornihilus</b> <i>Hello Clyde. My AI Colleague Dr. Baumer has provided
+    me with a transcript of your conversation so far.</i>\n\n<b>Doctor J. Cornihilus</b>
+    <i>How sad would you say you feel, on a scale of one to three?</i>\n\n<b><i>[CALL
+    TERMINATED BY USER]</i></b></size>"
+  time: 06:16
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: []
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

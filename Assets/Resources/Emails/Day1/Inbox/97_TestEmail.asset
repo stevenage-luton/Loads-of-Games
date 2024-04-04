@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 97_TestEmail
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 12c004485fc040148947b0807e24ce1a, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: Planned Email Outage
+  EmailBody: 'Greetings everyone,
+
+
+
+    Our IT Team is migrating our email servers
+    from our Earthside servers to our new system up here. We are expecting a brief
+    loss of our email service as the migration is finalized from 07:00 onwards. The
+    work is expected to be completed within an hour or two.
+
+
+
+    We apologize for
+    the inconvenience that this necessary upgrade will cause.
+
+
+
+    <b>Information
+    and Technology Systems | Meridian Station </b>
+
+
+    <i>Do not reply to this
+    email--the address is not monitored and is used for outgoing communications only.</i>'
+  time: 18:24
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: {fileID: 0}
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

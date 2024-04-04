@@ -24,6 +24,7 @@ public class EmailMainPage : MonoBehaviour
 
     public AudioClip keyPress;
     public AudioClip mouseClick;
+    public AudioClip recieveMail;
 
     public bool OnReplyScreen = false;
     private bool readyToSend = false;
@@ -47,10 +48,13 @@ public class EmailMainPage : MonoBehaviour
 
     List<EmailData> inboxEmails = new List<EmailData>();
     List<EmailData> sentEmails = new List<EmailData>();
+    List<EmailData> EmptyList = new List<EmailData>();
+
+    int m_day;
 
     private void Start()
     {
-        
+        m_day = 1;
 
         root = document.rootVisualElement;     
 
@@ -81,6 +85,8 @@ public class EmailMainPage : MonoBehaviour
         GameEventSystem.instance.onReplyButtonTrigger += ReplyButtonWasClicked;
         GameEventSystem.instance.onSendButtonTrigger += SendButtonWasClicked;
         GameEventSystem.instance.onReadyToSendTrigger += UpdateReadyToSend;
+        GameEventSystem.instance.onDayBegin += LoadEmailsForToday;
+        GameEventSystem.instance.midDayEmailRecieve += AddNewEmail;
 
         audioPlayer = GetComponent<AudioSource>();
 
@@ -96,15 +102,15 @@ public class EmailMainPage : MonoBehaviour
 
             var cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-            Debug.Log(cameraRay);
+            //Debug.Log(cameraRay);
 
             Debug.DrawRay(cameraRay.origin, cameraRay.direction * 100, Color.magenta);
 
             RaycastHit UIhit;
             if (!Physics.Raycast(cameraRay, out UIhit, 100f, LayerMask.GetMask("ScreenUI")))
             {
-                Debug.Log($"Invalid Position");
-                Debug.Log(UIhit.collider);
+                //Debug.Log($"Invalid Position");
+                //Debug.Log(UIhit.collider);
                 return invalidPosition;
             }
 
@@ -118,11 +124,18 @@ public class EmailMainPage : MonoBehaviour
         });
     }
 
+    private void Update()
+    {
+        var cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(cameraRay.origin, cameraRay.direction * 100, Color.magenta);
+    }
+
     public void InboxClicked(ClickEvent evt)
     {
         Debug.Log("inbox clicked!");
         //inbox.AddToClassList("selected");
         //sent.RemoveFromClassList("selected");
+        emaillist.Clear();
         FillEmailList(inboxEmails);
         emaillist.Rebuild();
     }
@@ -131,6 +144,7 @@ public class EmailMainPage : MonoBehaviour
         Debug.Log("sent clicked!");
         //sent.AddToClassList("selected");
         //inbox.RemoveFromClassList("selected");
+        emaillist.Clear();
         FillEmailList(sentEmails);
         emaillist.Rebuild();
     }
@@ -178,23 +192,26 @@ public class EmailMainPage : MonoBehaviour
         tab.AddToClassList("selected");
     }
 
-    void EnumerateAllEmails()
+    void EnumerateAllEmails(int dayNumber)
     {
         inboxEmails = new List<EmailData>();
         sentEmails = new List<EmailData>();
 
-        inboxEmails.AddRange(Resources.LoadAll<EmailData>("Emails/Day1/Inbox"));
-        sentEmails.AddRange(Resources.LoadAll<EmailData>("Emails/Day1/Sent"));
+        string dayString = "Day" + dayNumber;
+
+        inboxEmails.AddRange(Resources.LoadAll<EmailData>("Emails/" + dayString + "/Inbox"));
+        sentEmails.AddRange(Resources.LoadAll<EmailData>("Emails/" + dayString + "/Sent"));
+
+        foreach (EmailData data in inboxEmails)
+        {
+            data.replied = false;
+        }
     }
 
     void FillEmailList(List<EmailData> listtoLoad)
     {
 
-
-        emaillist.Clear();
-        emaillist.RefreshItems();
-        emaillist.itemsSource = listtoLoad;
-        emaillist.Rebuild();
+        emaillist.itemsSource = listtoLoad;;
 
         // Set up a make item function for a list entry
         emaillist.makeItem = () =>
@@ -237,15 +254,10 @@ public class EmailMainPage : MonoBehaviour
 
     void InitializeEmailList(VisualElement root, VisualTreeAsset entryTemplate)
     {
-        EnumerateAllEmails();
+        EnumerateAllEmails(m_day);
 
         // Store a reference to the template for the list entries
         m_ListEntryTemplate = entryTemplate;
-
-
-
-        
-
         // Register to get a callback when an item is selected
         //emaillist.selectionChanged += OnCharacterSelected;
     }
@@ -268,7 +280,7 @@ public class EmailMainPage : MonoBehaviour
         currentEmail = data;
 
 
-        if (TabIsCurrentlySelected(inbox) && data.hasReply)
+        if (TabIsCurrentlySelected(inbox) && data.reply != null && !data.replied)
         {
             buttonContainer = emailcontainer.Q<VisualElement>("replybuttoncontainer");
             var replyButton = m_ReplySendButton.Instantiate();
@@ -339,9 +351,19 @@ public class EmailMainPage : MonoBehaviour
         if (readyToSend)
         {
             emailcontainer.Clear();
-            //currentEmail.hasReply = false;
+            currentEmail.replied = true;
             sentEmails.Insert(0, currentEmail.reply);
-            Debug.Log("Send Button Was Clicked!");
+            if (currentEmail.reply.nextInThread.Count != 0)
+            {
+                foreach (EmailData email in currentEmail.reply.nextInThread)
+                {
+                    email.replied = false;
+                    GameEventSystem.instance.WaitForEmailReply(email);
+                }
+                
+            }
+            //Debug.Log("Send Button Was Clicked!");
+            //Debug.Log(currentEmail.reply);
             currentEmail = null;
             audioPlayer.PlayOneShot(mouseClick);
             OnReplyScreen = false;
@@ -359,5 +381,21 @@ public class EmailMainPage : MonoBehaviour
     void UpdateReadyToSend()
     {
         readyToSend = true;
+    }
+
+    void LoadEmailsForToday(int day)
+    {
+        m_day = day;
+        EnumerateAllEmails(day);
+        emaillist.Clear();
+        FillEmailList(EmptyList);
+        emaillist.Rebuild();
+    }
+
+    void AddNewEmail(EmailData data)
+    {
+        inboxEmails.Insert(0, data);
+        audioPlayer.PlayOneShot(recieveMail);
+        emaillist.RefreshItems();
     }
 }

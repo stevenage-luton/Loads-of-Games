@@ -38,7 +38,7 @@ public class EmailBodyTemplateController
         string toString = "To: ";
         foreach (EmailUser user in emailData.Recipient)
         {
-            toString += user.EmailAddress + ",";
+            toString += user.EmailAddress + ", ";
         }
 
         ToLabel.text = toString;

@@ -16,17 +16,17 @@ MonoBehaviour:
   Recipient:
   - {fileID: 11400000, guid: 1bbde91c54d574349bd42e64d84ea5ea, type: 2}
   - {fileID: 11400000, guid: 0bf4922e9f44ea14dbc294c0f0547fd2, type: 2}
-  Subject: 'RE: Test'
+  Subject: 'RE: The Labs'
   EmailBody: 'Greetings all,
 
 
     Remember the issue we previously discussed at
-    length about the fire elemental in the bunsen burner in lab 5? Jaft, I believe
-    you were concnerned about it also possibly being "Death Fire"?
+    length about the fire elemental in the Bunsen burner in lab 5? Jaft, I believe
+    you were concerned about it also possibly being "Death Fire"?
 
 
-    Well as
-    it turns out, it was just regular fire. False alarm.
+    Well as it
+    turns out, it was just regular fire. False alarm.
 
 
     Warmest possible regards,
@@ -34,7 +34,11 @@ MonoBehaviour:
 
     Clyde'
   time: 11:12
-  PortraitImage: {fileID: 21300000, guid: de18abed97215ad4f87f9d62712e54eb, type: 3}
   hasReply: 0
   replied: 0
   reply: {fileID: 0}
+  nextInThread:
+  - {fileID: 11400000, guid: dcea93b03325fd04ea834f00f0d2a8e2, type: 2}
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

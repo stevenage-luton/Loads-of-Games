@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmailUserName: Meridian Curse Management
   EmailAddress: inquiries@MCM.meridian.net
+  PortraitImage: {fileID: 21300000, guid: 5fc7d2b9d8c5d724caa5f5ee59df842c, type: 3}

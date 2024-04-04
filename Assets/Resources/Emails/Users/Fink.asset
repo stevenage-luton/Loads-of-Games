@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmailUserName: Fink Stinkular
   EmailAddress: finkstinker@systems.meridian.net
+  PortraitImage: {fileID: 21300000, guid: dd52f3ff99aa15345bee5ea1fafc2cf8, type: 3}

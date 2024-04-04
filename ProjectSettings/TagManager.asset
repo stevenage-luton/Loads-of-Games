@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interact
+  - PlayerStart
   layers:
   - Default
   - TransparentFX

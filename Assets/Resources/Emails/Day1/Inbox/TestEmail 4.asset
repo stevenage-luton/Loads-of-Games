@@ -15,15 +15,18 @@ MonoBehaviour:
   EmailUser: {fileID: 11400000, guid: db41f7bcaa8fc8b4bafdbca1b2325802, type: 2}
   Recipient:
   - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
-  Subject: Test
-  EmailBody: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum."'
+  Subject: Late shipment
+  EmailBody: "Greetings Mr. Thunderpants,\n\nOrder #BS06-113245-LT is expected to
+    arrive at Space Station One by May. Yet our tracker shows that it hasn't left
+    Meridian Station. \n\nThe next monthly launch window for Translunar Orbit Injection
+    isn't until late April. So presumably this means our cargo is going to be delayed
+    by a month. Was the launch aborted? Why weren't we informed? \n\nStevenage Luton\n\nShipping
+    Executive, Bourbon Solutions\n"
   time: 10:16
-  PortraitImage: {fileID: 21300000, guid: de18abed97215ad4f87f9d62712e54eb, type: 3}
   hasReply: 0
   replied: 0
   reply: {fileID: 0}
+  nextInThread: []
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

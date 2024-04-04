@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 55_FinkReply1
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: b6e5e44844639d84fa381289e943b80e, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: RE:RE:Test
+  EmailBody: "Awesome, we're back up. Shouldn't be any more issues with the servers
+    now the migration is finished. \n\nI have no idea why management gave us such
+    a small window, haven't crunched this hard since the stationwide OS upgrade for
+    that centennial zero-day. I guess that was before you joined, but still.\n\nCheers,\n\nFink\n------------------------------------------------------------\nLead
+    Systems Engineer, Meridian Station"
+  time: 09:36
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread:
+  - {fileID: 0}
+  threadTime: 0
+  minTime: 5
+  maxTime: 30

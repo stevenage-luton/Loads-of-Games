@@ -6,5 +6,8 @@ public abstract class Interactable : MonoBehaviour
 {
     public abstract void OnInteract();
 
-    public abstract string OnHover();
+    public virtual void OnHover()
+    {
+        
+    }
 }

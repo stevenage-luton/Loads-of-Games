@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmailUserName: Jaft Morris
   EmailAddress: jaftmorris@research.meridian.net
+  PortraitImage: {fileID: 21300000, guid: e38e1730a42c1cb4eab19593f9e7defc, type: 3}

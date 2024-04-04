@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 55_FinkMissing
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: b3cc3d31d046d6349bdef88b49c9de47, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: Fink is late?
+  EmailBody: "Hey Clyde,\r\n\r\nI remember Fink saying he had some business down
+    the vine and he'd be off-station for a couple of days. Well, it's been a couple
+    of days. \r\n\r\nHe's nearly two hours late for work, which is whatever, but
+    there hasn\u2019t been any malfunction reported with the lifts in months. Did
+    he just oversleep? I don\u2019t think I\u2019ve even seen him take a sick day
+    before.\r\n\r\nJust wanted to check in, thought you\u2019d probably know more
+    about it than me. You\u2019re probably more in the loop for anything involving
+    management anyway, right?\r\n\r\nTalk later,\r\n\r\nCain\r\n\r\n<i>Cain Glover
+    : Senior Server Specialist </i>\r"
+  time: 09:00
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 11400000, guid: 945e53b3548e1ec4b959889b7e0fb3b5, type: 2}
+  nextInThread:
+  - {fileID: 0}
+  threadTime: 60
+  minTime: 0
+  maxTime: 0

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: 98_CurseSquadEmail
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 0bf4922e9f44ea14dbc294c0f0547fd2, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: New policy regarding complaints
+  EmailBody: "Hello all,\r\n\r\nWe've had a lot of complaints recently regarding
+    our responses to potentially magic-related incidents occurring across the station.
+    As you may be aware, there have been a lot of false-positives lately and this
+    has naturally led to what the public sees as unjust or overviolent responses
+    on our part. \nI\u2019m sure everyone is aware of the potential Cerberus/Dire
+    Hound reported in Maintenance that unfortunately led to Atmospheric Technician
+    Basinger\u2019s pet dog Snuffles being Bonecrunched in an officer-involved piledriving.\r\n\r\nAs
+    a result, we\u2019ve spoken to station management, and it\u2019s been decided
+    that we\u2019re closing our complaints department. All complaints are to be handled
+    by station administration, who will act as a liaison between us and the general
+    public.\r\n\r\n<b> Meridian Station Curse Management | Combat Exorcist Dispatch
+    </b>\r\n\r\n<i> do not reply to this email. This address is not monitored. </i>"
+  time: 16:56
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: {fileID: 0}
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

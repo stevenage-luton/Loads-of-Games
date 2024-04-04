@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a8646e0f15ed44ebd9b1d6bef25920, type: 3}
+  m_Name: SlouchSpineTypingHandsDeskLegs
+  m_EditorClassIdentifier: 
+  TorsoPosition: {fileID: 11400000, guid: 8eba7f4fff5ee7244bf827609a2a4f4f, type: 2}
+  ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
+  LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
+  StamRegenModifier: 1
+  DrainModifier: 1
