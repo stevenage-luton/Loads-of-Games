@@ -561,8 +561,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8eba7f4fff5ee7244bf827609a2a4f4f, type: 2}
   - {fileID: 11400000, guid: 124e13df12c34eb42b81f1070f317e3f, type: 2}
   - {fileID: 11400000, guid: 6cedb8c1592655c4d8e90ae853a3b10d, type: 2}
-  m_armAnimations: []
-  m_legAnimations: []
+  m_armAnimations:
+  - {fileID: 11400000, guid: 8d767f6b2913f70438e51120ea2e526e, type: 2}
+  - {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
+  - {fileID: 11400000, guid: 2af16e6a891b7e941aef9c1a645554e1, type: 2}
+  m_legAnimations:
+  - {fileID: 11400000, guid: 3b208ae97aeba69408729272a7486ff7, type: 2}
+  - {fileID: 11400000, guid: 784dba8ccbb1bfb45ab51a7b1d41c7c6, type: 2}
+  - {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
+  m_comboData: []
+  currentCombo: {fileID: 0}
+  m_torsoIndex: 1
+  m_armIndex: 1
+  m_legIndex: 1
 --- !u!1 &272158099
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb952f990aa06374a99b2fffe590700e, type: 3}
   m_Name: SlouchSpine
   m_EditorClassIdentifier: 
-  PositionName: SlouchSpine
+  PositionName: Slouch
   StaminaRegain: 5

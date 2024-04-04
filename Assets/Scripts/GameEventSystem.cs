@@ -102,4 +102,37 @@ public class GameEventSystem : MonoBehaviour
 
     }
 
+    public event Action<int> updateArmPosition;
+
+    public void ChangeArmTrigger(int val)
+    {
+        if (updateArmPosition != null)
+        {
+            updateArmPosition.Invoke(val);
+        }
+
+    }
+
+    public event Action<int> updateTorsoPosition;
+
+    public void ChangeTorsoTrigger(int val)
+    {
+        if (updateTorsoPosition != null)
+        {
+            updateTorsoPosition.Invoke(val);
+        }
+
+    }
+
+    public event Action<int> updateLegPosition;
+
+    public void ChangeLegTrigger(int val)
+    {
+        if (updateLegPosition != null)
+        {
+            updateLegPosition.Invoke(val);
+        }
+
+    }
+
 }
