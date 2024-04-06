@@ -8,6 +8,8 @@ public class ComboData : ScriptableObject
     public AnimationData ArmsPosition;
     public AnimationData LegsPosition;
 
+    public string ComboNickname;
+
     public float StamRegenModifier = 1;
 
     public float DrainModifier = 1;

@@ -15,5 +15,6 @@ MonoBehaviour:
   TorsoPosition: {fileID: 11400000, guid: 6cedb8c1592655c4d8e90ae853a3b10d, type: 2}
   ArmsPosition: {fileID: 11400000, guid: 8d767f6b2913f70438e51120ea2e526e, type: 2}
   LegsPosition: {fileID: 11400000, guid: 784dba8ccbb1bfb45ab51a7b1d41c7c6, type: 2}
+  ComboNickname: The Boston Typewriter
   StamRegenModifier: 1.3
   DrainModifier: 1.4

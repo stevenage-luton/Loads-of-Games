@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour
 
     float valueToRemove;
 
+    float spineDrainModifier;
+
     // Start is called before the first frame update
     void Start()
     {

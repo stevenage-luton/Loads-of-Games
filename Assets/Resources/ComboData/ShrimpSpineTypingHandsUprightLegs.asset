@@ -15,5 +15,6 @@ MonoBehaviour:
   TorsoPosition: {fileID: 11400000, guid: 6cedb8c1592655c4d8e90ae853a3b10d, type: 2}
   ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
   LegsPosition: {fileID: 11400000, guid: 784dba8ccbb1bfb45ab51a7b1d41c7c6, type: 2}
+  ComboNickname: Hackerman
   StamRegenModifier: 1
   DrainModifier: 1

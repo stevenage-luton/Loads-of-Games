@@ -15,5 +15,6 @@ MonoBehaviour:
   TorsoPosition: {fileID: 11400000, guid: 124e13df12c34eb42b81f1070f317e3f, type: 2}
   ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
+  ComboNickname: Spine Tickler
   StamRegenModifier: 1
   DrainModifier: 1

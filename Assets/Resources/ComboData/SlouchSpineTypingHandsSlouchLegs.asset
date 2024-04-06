@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SlouchSpineTypingHandsSlouchLegs
   m_EditorClassIdentifier: 
   TorsoPosition: {fileID: 11400000, guid: 8eba7f4fff5ee7244bf827609a2a4f4f, type: 2}
-  ArmsPosition: {fileID: 11400000, guid: 8d767f6b2913f70438e51120ea2e526e, type: 2}
+  ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
   LegsPosition: {fileID: 11400000, guid: 3b208ae97aeba69408729272a7486ff7, type: 2}
+  ComboNickname: The Oblique Mindset
   StamRegenModifier: 1
   DrainModifier: 1

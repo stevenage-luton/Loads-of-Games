@@ -15,5 +15,6 @@ MonoBehaviour:
   TorsoPosition: {fileID: 11400000, guid: 124e13df12c34eb42b81f1070f317e3f, type: 2}
   ArmsPosition: {fileID: 11400000, guid: 2af16e6a891b7e941aef9c1a645554e1, type: 2}
   LegsPosition: {fileID: 11400000, guid: 784dba8ccbb1bfb45ab51a7b1d41c7c6, type: 2}
+  ComboNickname: Taking Five (2102 is gonna be my year)
   StamRegenModifier: 1
   DrainModifier: 1

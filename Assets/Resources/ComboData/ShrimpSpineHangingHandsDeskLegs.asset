@@ -15,5 +15,6 @@ MonoBehaviour:
   TorsoPosition: {fileID: 11400000, guid: 6cedb8c1592655c4d8e90ae853a3b10d, type: 2}
   ArmsPosition: {fileID: 11400000, guid: 8d767f6b2913f70438e51120ea2e526e, type: 2}
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
+  ComboNickname: The Lazy Susan
   StamRegenModifier: 1.2
   DrainModifier: 1.3

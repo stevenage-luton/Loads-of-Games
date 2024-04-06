@@ -23,10 +23,17 @@ public class GameUI : MonoBehaviour
     private VisualElement root;
     private VisualElement Container;
 
+    private VisualElement dayEndElement;
+
+    private VisualElement barElement;
+
     bool ticking = false;
 
     public GameController controller;
 
+    Label DayText;
+
+    Button ButtonText;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,14 @@ public class GameUI : MonoBehaviour
         Container = root.Q<VisualElement>("ScreenContainer");
         timerBar = root.Q<ProgressBar>();
 
+        barElement = root.Q<VisualElement>("DayTimer");
+
+        dayEndElement = root.Q<VisualElement>("LevelEndScreen");
+        DayText = dayEndElement.Q<Label>("EmailsAnswered");
+        ButtonText = dayEndElement.Q<Button>("EndDayButton");
+
+        ButtonText.RegisterCallback<ClickEvent>(EndDayButtonClick);
+
         timerBar.highValue =controller.dayDuration;
 
         GameEventSystem.instance.onDayEnd += DeleteOldBar;
@@ -46,48 +61,33 @@ public class GameUI : MonoBehaviour
         ticking = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         timerBar.value = controller.dayDuration - controller.dayTime;
     }
 
     void DeleteOldBar() {
-        Container.Clear();
 
         ticking = false;
         _uiDocument.panelSettings.sortingOrder = 2;
-        var DayEndTemp = m_DayEndTemplate.Instantiate();
-        Label DayText = DayEndTemp.Q<Label>("EmailsAnswered");
+
+        Container.AddToClassList("background--black");
+        barElement.RemoveFromClassList("bar--in");
+        dayEndElement.RemoveFromClassList("endScreen-off");
+
         DayText.text = "You answered " + controller.sentEmails + " emails.";
 
-        Button ButtonText = DayEndTemp.Q<Button>("EndDayButton");
         ButtonText.text = "Click to begin day " + (controller.day+1) + ".";
 
-        ButtonText.RegisterCallback<ClickEvent>(EndDayButtonClick);
-
-        DayEndTemp.style.flexGrow = 1f;
-
-        Container.Add(DayEndTemp);
 
     }
 
     void AddNewBar(int day)
     {
-        Container.Clear();
+        Container.RemoveFromClassList("background--black");
+        barElement.AddToClassList("bar--in");
+        dayEndElement.AddToClassList("endScreen-off");
         _uiDocument.panelSettings.sortingOrder = -1;
-        var BarTemp = m_BarTemplate.Instantiate();
-
-        Container.Add(BarTemp);
-
-        BarTemp.style.alignItems = Align.Stretch;
-        BarTemp.style.justifyContent = Justify.FlexEnd;
-        BarTemp.style.flexGrow = 1f;
-        BarTemp.style.marginLeft = 80.0f;
-        BarTemp.style.marginRight = 80.0f;
-
-        timerBar = root.Q<ProgressBar>();
-        timerBar.highValue = controller.dayDuration;
     }
 
     void EndDayButtonClick(ClickEvent evt)

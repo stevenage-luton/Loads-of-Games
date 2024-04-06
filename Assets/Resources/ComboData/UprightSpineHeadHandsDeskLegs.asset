@@ -15,5 +15,6 @@ MonoBehaviour:
   TorsoPosition: {fileID: 11400000, guid: 124e13df12c34eb42b81f1070f317e3f, type: 2}
   ArmsPosition: {fileID: 11400000, guid: 2af16e6a891b7e941aef9c1a645554e1, type: 2}
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
+  ComboNickname: Apathy vs Desire To Keep Current Job
   StamRegenModifier: 1
   DrainModifier: 1

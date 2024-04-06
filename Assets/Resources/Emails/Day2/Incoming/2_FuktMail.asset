@@ -20,11 +20,13 @@ MonoBehaviour:
 
 
     We are exporting a shipment of matter-manipulators
-    to Space Station One, due for arrival by May. Our Client is paying for a priority
-    shipment with tracking, can you please confirm that our package is marked as
-    priority and provide tracking information so that we can update our Client on
-    the progress of their shipment?'
-  time: 09:00
+    to Space Station One, due for arrival by May. The client is paying for priority
+    shipment this time.
+
+
+    Can you please confirm that our package is marked as
+    priority and provide us with tracking information?'
+  time: 09:16
   hasReply: 0
   replied: 0
   reply: {fileID: 0}

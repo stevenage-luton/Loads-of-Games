@@ -7,6 +7,9 @@ public class DeskManAnimationController : MonoBehaviour
 
     Animator m_animator;
 
+    public Animator chairAnimator;
+
+
     [SerializeField]
     List<AnimationData> m_torsoAnimations;
     [SerializeField]
@@ -22,7 +25,8 @@ public class DeskManAnimationController : MonoBehaviour
     public int m_torsoIndex, m_armIndex, m_legIndex = 1;
 
     string m_animationToPlay;
-    void Start()
+
+    private void OnEnable()
     {
         m_animationToPlay = m_torsoAnimations[m_torsoIndex].PositionName + "/" + m_legAnimations[m_legIndex].PositionName + "/" + m_armAnimations[m_armIndex].PositionName;
 
@@ -30,12 +34,16 @@ public class DeskManAnimationController : MonoBehaviour
 
         m_animator = GetComponent<Animator>();
 
+        UpdateCurrentAnimation();
+        UpdateCurrentCombo();
+
+    }
+
+    void Start()
+    {
         GameEventSystem.instance.updateTorsoPosition += IncrementTorsoAnimation;
         GameEventSystem.instance.updateLegPosition += IncrementLegAnimation;
         GameEventSystem.instance.updateArmPosition += IncrementArmAnimation;
-
-        UpdateCurrentAnimation();
-        UpdateCurrentCombo();
     }
 
     void Update()
@@ -47,6 +55,15 @@ public class DeskManAnimationController : MonoBehaviour
         m_animationToPlay = m_torsoAnimations[m_torsoIndex].PositionName + "/" + m_legAnimations[m_legIndex].PositionName + "/" + m_armAnimations[m_armIndex].PositionName;
 
         m_animator.Play(m_animationToPlay);
+
+        if (m_torsoAnimations[m_torsoIndex].PositionName == "Upright")
+        {
+            chairAnimator.Play("Chair/Upright");
+        }
+        else
+        {
+            chairAnimator.Play("Chair/Slouch");
+        }
     }
 
     void UpdateCurrentCombo()

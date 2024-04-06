@@ -1,7 +1,47 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="LevelEndScreen" src="project://database/Assets/UI/Game/LevelEndScreen.uxml?fileID=9197481963319205126&amp;guid=03ea9ade7fec1b34188293f1168ce52d&amp;type=3#LevelEndScreen" />
     <ui:Template name="DayTimer" src="project://database/Assets/UI/Game/DayTimer.uxml?fileID=9197481963319205126&amp;guid=bb21597a398e40d419ad6cc7d1398eef&amp;type=3#DayTimer" />
     <Style src="project://database/Assets/UI/Game/screenUI.uss?fileID=7433441132597879392&amp;guid=9c0292afd076a2b4883176230a36ed76&amp;type=3#screenUI" />
-    <ui:VisualElement name="ScreenContainer" style="flex-grow: 1;">
-        <ui:Instance template="DayTimer" name="DayTimer" />
+    <ui:VisualElement name="ScreenContainer" class="background--In background--Out">
+        <ui:Instance template="LevelEndScreen" name="LevelEndScreen" class="endScreen--on endScreen-off" />
+        <ui:Instance template="DayTimer" name="DayTimer" class="bar--out bar--in" />
+        <ui:VisualElement name="ButtonsContainer" class="SpineUI--up">
+            <ui:VisualElement name="TopBarContainer" style="flex-grow: 1; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="Spine-O-Vision™" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TopLabel" style="flex-shrink: 1; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.63); letter-spacing: 2px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="MidBarContainer" style="flex-grow: 1; height: 60%; flex-direction: row; align-self: auto;">
+                <ui:VisualElement name="LeftButtonsContainer" style="flex-grow: 1; min-width: 50%; min-height: auto;">
+                    <ui:VisualElement name="ArmBackButtonContainer" class="buttonContainer" style="flex-grow: 1; min-width: auto; min-height: auto; justify-content: flex-start;">
+                        <ui:Label tabindex="-1" text="Arms" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ArmsLabel" class="buttonSideLabelLeft" style="flex-shrink: 0; flex-grow: 0;" />
+                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ArmsMinusOne" class="ArrowButton ArrowButtonLeft" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="TorsoBackButtonContainer" class="buttonContainer" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Torso" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TorsoLabel" class="buttonSideLabelLeft" style="flex-shrink: 0; flex-grow: 0;" />
+                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TorsoMinusOne" class="ArrowButton ArrowButtonLeft" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="LegsBackButtonContainer" class="buttonContainer" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Legs" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LegsLabel" class="buttonSideLabelLeft" style="flex-shrink: 0; flex-grow: 0;" />
+                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LegsMinusOne" class="ArrowButton ArrowButtonLeft" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="RightButtonsContainer" style="flex-grow: 1; min-width: 50%; min-height: auto;">
+                    <ui:VisualElement name="ArmForwardContainer" class="buttonContainerRight" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ArmsDescription" class="buttonSideLabelRight" style="flex-shrink: 0; flex-grow: 0;" />
+                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ArmsPlusOne" class="ArrowButton ArrowButtonRight" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="TorsoForwardContainer" class="buttonContainerRight" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TorsoDescription" class="buttonSideLabelRight" style="flex-shrink: 0; flex-grow: 0;" />
+                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TorsoPlusOne" class="ArrowButton ArrowButtonRight" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="LegsForwardContainer" class="buttonContainerRight" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LegsDescription" class="buttonSideLabelRight" style="flex-shrink: 0; flex-grow: 0;" />
+                        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LegsPlusOne" class="ArrowButton ArrowButtonRight" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="BottomContainer" style="flex-grow: 1; height: 5%; min-width: auto; min-height: auto; align-items: center;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BottomLabel" style="align-items: auto; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.62); letter-spacing: 2px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

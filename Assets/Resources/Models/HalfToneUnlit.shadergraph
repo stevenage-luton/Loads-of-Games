@@ -3070,15 +3070,15 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1853.9998779296875,
-            "y": 2193.999755859375,
+            "x": -1854.000244140625,
+            "y": 2194.0,
             "width": 208.0,
-            "height": 279.0
+            "height": 279.000244140625
         }
     },
     "m_Slots": [
         {
-            "m_Id": "8cdb9be1754c49c9a110f0eb10d44c0e"
+            "m_Id": "fb7f1cc5f2b54d64af05a067c77b0321"
         }
     ],
     "synonyms": [],
@@ -3564,29 +3564,6 @@
         "z": 0.0,
         "w": 0.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
-    "m_ObjectId": "8cdb9be1754c49c9a110f0eb10d44c0e",
-    "m_Id": 1,
-    "m_DisplayName": "Diffuse",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Diffuse",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": []
 }
 
 {
@@ -4943,9 +4920,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1574.0001220703125,
-            "y": 1200.0,
-            "width": 145.0001220703125,
+            "x": -1572.0001220703125,
+            "y": 1159.0,
+            "width": 145.0,
             "height": 129.0
         }
     },
@@ -5630,6 +5607,29 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "fb7f1cc5f2b54d64af05a067c77b0321",
+    "m_Id": 1,
+    "m_DisplayName": "Diffuse",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Diffuse",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
 }
 
 {

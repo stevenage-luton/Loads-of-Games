@@ -15,14 +15,11 @@ public class PlayerLook : MonoBehaviour
     public Transform destination;
     public Transform originalHead;
 
-    Vector3 oldPosition;
-    Quaternion oldRotation;
-
     public float movementTime = 1;
     public float rotationSpeed = 5f;
     public float movementSpeed = 5f;
 
-    float interactionRange = 30f;
+    float interactionRange = 2f;
 
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private string interactTag = "Interact";
@@ -60,8 +57,9 @@ public class PlayerLook : MonoBehaviour
             case State.Movement:
                 Cursor.lockState = CursorLockMode.Locked;
 
-
-                transform.position = Vector3.Lerp(transform.position, originalHead.position, movementSpeed * Time.deltaTime);
+                SlerpCameraToRotation(transform, originalHead);
+                //transform.position = Vector3.Lerp(transform.position, originalHead.position, movementSpeed * Time.deltaTime);
+                LerpCameraToPosition(transform, transform.position, originalHead.position);
 
 
                 playerRotation -= mouseY;
@@ -104,8 +102,10 @@ public class PlayerLook : MonoBehaviour
 
 
                 //Interpolate Rotation;
-                transform.rotation = Quaternion.Slerp(transform.rotation, gameScreen.rotation, rotationSpeed * Time.deltaTime);
-                transform.position = Vector3.Lerp(transform.position, destination.position, movementSpeed * Time.deltaTime);
+                //transform.rotation = Quaternion.Slerp(transform.rotation, gameScreen.rotation, rotationSpeed * Time.deltaTime);
+                SlerpCameraToRotation(transform, gameScreen);
+                //transform.position = Vector3.Lerp(transform.position, destination.position, movementSpeed * Time.deltaTime);
+                LerpCameraToPosition(transform, transform.position, destination.position);
 
                 if (Input.GetButtonDown("Cancel"))
                 {
@@ -161,5 +161,14 @@ public class PlayerLook : MonoBehaviour
         state = State.Movement;
         playerMovement.remainStationary = false;
 
+    }
+
+    void LerpCameraToPosition(Transform transformToMove, Vector3 startPosition, Vector3 endPosition)
+    {
+        transformToMove.position = Vector3.Lerp(startPosition, endPosition, movementSpeed * Time.deltaTime);
+    }
+    void SlerpCameraToRotation(Transform transformToMove, Transform targetTransform)
+    {
+        transformToMove.rotation = Quaternion.Slerp(transformToMove.rotation, targetTransform.rotation, rotationSpeed * Time.deltaTime);
     }
 }
