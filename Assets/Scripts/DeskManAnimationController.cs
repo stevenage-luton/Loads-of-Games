@@ -9,6 +9,8 @@ public class DeskManAnimationController : MonoBehaviour
 
     public Animator chairAnimator;
 
+    [SerializeField]
+    SkinnedMeshRenderer characterMesh;
 
     [SerializeField]
     List<AnimationData> m_torsoAnimations;
@@ -26,6 +28,8 @@ public class DeskManAnimationController : MonoBehaviour
 
     string m_animationToPlay;
 
+    AudioSource typingLoop;
+
     private void OnEnable()
     {
         m_animationToPlay = m_torsoAnimations[m_torsoIndex].PositionName + "/" + m_legAnimations[m_legIndex].PositionName + "/" + m_armAnimations[m_armIndex].PositionName;
@@ -34,8 +38,9 @@ public class DeskManAnimationController : MonoBehaviour
 
         m_animator = GetComponent<Animator>();
 
-        UpdateCurrentAnimation();
-        UpdateCurrentCombo();
+        typingLoop = GetComponent<AudioSource>();
+
+
 
     }
 
@@ -44,6 +49,13 @@ public class DeskManAnimationController : MonoBehaviour
         GameEventSystem.instance.updateTorsoPosition += IncrementTorsoAnimation;
         GameEventSystem.instance.updateLegPosition += IncrementLegAnimation;
         GameEventSystem.instance.updateArmPosition += IncrementArmAnimation;
+        GameEventSystem.instance.onSpineModeButton += EnableMesh;
+        GameEventSystem.instance.onEndSpineModeButton += DisableMesh;
+        GameEventSystem.instance.onGenericDayStart += UpdateCurrentAnimation;
+        GameEventSystem.instance.onGenericDayStart += DisableMesh;
+
+        UpdateCurrentAnimation();
+        DisableMesh();
     }
 
     void Update()
@@ -64,6 +76,17 @@ public class DeskManAnimationController : MonoBehaviour
         {
             chairAnimator.Play("Chair/Slouch");
         }
+
+        if (m_armAnimations[m_armIndex].PositionName == "TypingHands" && !typingLoop.isPlaying)
+        {
+            typingLoop.Play();
+        }
+        else if (m_armAnimations[m_armIndex].PositionName != "TypingHands" && typingLoop.isPlaying)
+        {
+            typingLoop.Stop();
+        }
+
+        UpdateCurrentCombo();
     }
 
     void UpdateCurrentCombo()
@@ -73,9 +96,10 @@ public class DeskManAnimationController : MonoBehaviour
             if (combo.TorsoPosition.PositionName == m_torsoAnimations[m_torsoIndex].PositionName && combo.ArmsPosition.PositionName == m_armAnimations[m_armIndex].PositionName && combo.LegsPosition.PositionName == m_legAnimations[m_legIndex].PositionName)
             {
                 currentCombo = combo;
+                GameEventSystem.instance.UpdateComboAnimation(currentCombo);
                 return;
             }
-        }
+        }     
     }
 
     void IncrementTorsoAnimation(int value)
@@ -84,7 +108,7 @@ public class DeskManAnimationController : MonoBehaviour
             {
                 m_torsoIndex = 0;
             }
-            else if(m_torsoIndex + value <= 0)
+            else if(m_torsoIndex + value < 0)
             {
                 m_torsoIndex = m_torsoAnimations.Count -1;
             }
@@ -100,7 +124,7 @@ public class DeskManAnimationController : MonoBehaviour
         {
             m_armIndex = 0;
         }
-        else if (m_armIndex + value <= 0)
+        else if (m_armIndex + value < 0)
         {
             m_armIndex = m_armAnimations.Count - 1;
         }
@@ -116,7 +140,7 @@ public class DeskManAnimationController : MonoBehaviour
         {
             m_legIndex = 0;
         }
-        else if (m_legIndex + value <= 0)
+        else if (m_legIndex + value < 0)
         {
             m_legIndex = m_legAnimations.Count - 1;
         }
@@ -125,6 +149,17 @@ public class DeskManAnimationController : MonoBehaviour
             m_legIndex += value;
         }
         UpdateCurrentAnimation();
+    }
+
+    void EnableMesh()
+    {
+        characterMesh.enabled = true;
+        UpdateCurrentAnimation();
+    }
+    void DisableMesh()
+    {
+        characterMesh.enabled = false;
+        typingLoop.Stop();
     }
 
 }

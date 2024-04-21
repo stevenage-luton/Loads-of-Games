@@ -40,6 +40,40 @@ public class GameEventSystem : MonoBehaviour
 
     }
 
+    public event Action onSpineModeButton;
+    public void SpineModeTrigger()
+    {
+        if (onSpineModeButton != null)
+        {
+            onSpineModeButton.Invoke();
+        }
+
+    }
+
+    public event Action onConfirmSpineMode;
+
+    public void ConfirmSpineModeButton()
+    {
+        if (onEndSpineModeButton != null)
+        {
+            onEndSpineModeButton.Invoke();
+        }
+        if (onConfirmSpineMode != null)
+        {
+            onConfirmSpineMode.Invoke();
+        }
+    }
+
+    public event Action onEndSpineModeButton;
+    public void EndSpineModeTrigger()
+    {
+        if (onEndSpineModeButton != null)
+        {
+            onEndSpineModeButton.Invoke();
+        }
+
+    }
+
     public event Action onComputerInteract;
     public void ComputerInteractTrigger()
     {
@@ -69,16 +103,19 @@ public class GameEventSystem : MonoBehaviour
         }
 
     }
-
+    public event Action onGenericDayStart;
     public event Action<int> onDayBegin;
     public void DayBeginTrigger(int day)
     {
         if (onDayBegin != null)
         {
             onDayBegin.Invoke(day);
+            onGenericDayStart.Invoke();
         }
 
     }
+
+
 
     public event Action<EmailData> midDayEmailRecieve;
 
@@ -133,6 +170,57 @@ public class GameEventSystem : MonoBehaviour
             updateLegPosition.Invoke(val);
         }
 
+    }
+
+    public event Action<ComboData> onUpdateComboAnimation;
+
+    public void UpdateComboAnimation(ComboData data)
+    {
+        if (onUpdateComboAnimation != null)
+        {
+            onUpdateComboAnimation.Invoke(data);
+        }
+
+    }
+
+    public event Action onUpdateComboUI;
+
+    public void UpdateComboUI()
+    {
+        if (onUpdateComboUI != null)
+        {
+            onUpdateComboUI.Invoke();
+        }
+    }
+
+    public event Action onRecieveSpineReadySignal;
+
+    public void SignalToggleSpineUpdateReady()
+    {
+        if (onRecieveSpineReadySignal != null)
+        {
+            onRecieveSpineReadySignal.Invoke();
+        }
+    }
+
+    public event Action onBeginScoliosisMode;
+
+    public void BeginScoliosisMode()
+    {
+        if (onBeginScoliosisMode != null)
+        {
+            onBeginScoliosisMode.Invoke();
+        }
+    }
+
+    public event Action onEndScoliosisMode;
+
+    public void EndScoliosisMode()
+    {
+        if (onEndScoliosisMode != null)
+        {
+            onEndScoliosisMode.Invoke();
+        }
     }
 
 }

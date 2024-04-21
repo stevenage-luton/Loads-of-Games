@@ -17,4 +17,4 @@ MonoBehaviour:
   LegsPosition: {fileID: 11400000, guid: 784dba8ccbb1bfb45ab51a7b1d41c7c6, type: 2}
   ComboNickname: Normal Mode
   StamRegenModifier: 1
-  DrainModifier: 0.3
+  DrainModifier: 0.4

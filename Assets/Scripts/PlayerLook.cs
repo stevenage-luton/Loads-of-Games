@@ -12,7 +12,9 @@ public class PlayerLook : MonoBehaviour
 
     public Canvas canvas;
 
-    public Transform destination;
+    public Transform computerDestination;
+    public Transform spineDestination;
+
     public Transform originalHead;
 
     public float movementTime = 1;
@@ -26,14 +28,23 @@ public class PlayerLook : MonoBehaviour
 
     [SerializeField] private Transform gameScreen;
 
+    [SerializeField] private Transform characterModel;
+
     private GameObject selectedObject;
     private Transform selectedTransform;
+
+    public bool spineReady = false;
+
+    private bool canSit = true;
+
+    AudioSource nullSound;
 
     public enum State
     {
         Movement,
         Computer,
         DayInterlude,
+        SpineMode,
     }
 
     public State state;
@@ -45,12 +56,26 @@ public class PlayerLook : MonoBehaviour
         GameEventSystem.instance.onEndInteract += EndComputerMode;
         GameEventSystem.instance.onDayEnd += BeginInterlude;
         GameEventSystem.instance.onDayBegin += EndInterlude;
+        GameEventSystem.instance.onSpineModeButton += BeginSpineMode;
+        GameEventSystem.instance.onEndSpineModeButton += EndSpineMode;
+        GameEventSystem.instance.onRecieveSpineReadySignal += ToggleSpineReady;
+        GameEventSystem.instance.onBeginScoliosisMode += CantSit;
+        GameEventSystem.instance.onEndScoliosisMode += CanSit;
+
+        nullSound = GetComponent<AudioSource>();
+
 
     }
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        if (!canSit)
+        {;
+            mouseX = -mouseX;
+            mouseY = -mouseY;
+        }
+        
 
         switch (state)
         {
@@ -67,6 +92,11 @@ public class PlayerLook : MonoBehaviour
 
                 transform.localRotation = Quaternion.Euler(playerRotation, 0f, 0f);
                 playerBody.Rotate(Vector3.up * mouseX);
+
+                if (!canSit)
+                {
+                    return;
+                }
 
                 RaycastHit hit;
 
@@ -105,17 +135,49 @@ public class PlayerLook : MonoBehaviour
                 //transform.rotation = Quaternion.Slerp(transform.rotation, gameScreen.rotation, rotationSpeed * Time.deltaTime);
                 SlerpCameraToRotation(transform, gameScreen);
                 //transform.position = Vector3.Lerp(transform.position, destination.position, movementSpeed * Time.deltaTime);
-                LerpCameraToPosition(transform, transform.position, destination.position);
+                LerpCameraToPosition(transform, transform.position, computerDestination.position);
 
                 if (Input.GetButtonDown("Cancel"))
                 {
                     GameEventSystem.instance.EndInteractTrigger();
                 }
 
+                if (Input.GetButtonDown("Fire3"))
+                {
+                    if (spineReady)
+                    {
+                        GameEventSystem.instance.SpineModeTrigger();
+                    }
+                    else
+                    {
+                        nullSound.Play();
+                    }
+                    
+                }
+
                 break;
 
             case State.DayInterlude:
                 Cursor.lockState = CursorLockMode.Confined;
+
+                break;
+
+            case State.SpineMode:
+                Cursor.lockState = CursorLockMode.Confined;
+
+                if (!gameScreen)
+                {
+                    return;
+                }
+
+                SlerpCameraToRotation(transform, characterModel);
+                //transform.position = Vector3.Lerp(transform.position, destination.position, movementSpeed * Time.deltaTime);
+                LerpCameraToPosition(transform, transform.position, spineDestination.position);
+
+                if (Input.GetButtonDown("Cancel"))
+                {
+                    GameEventSystem.instance.EndSpineModeTrigger();
+                }
 
                 break;
 
@@ -160,7 +222,18 @@ public class PlayerLook : MonoBehaviour
     {
         state = State.Movement;
         playerMovement.remainStationary = false;
+        spineReady = true;
 
+    }
+
+    void BeginSpineMode()
+    {
+        state = State.SpineMode;
+        playerMovement.remainStationary = true;
+    }
+    void EndSpineMode()
+    {
+        state = State.Computer;
     }
 
     void LerpCameraToPosition(Transform transformToMove, Vector3 startPosition, Vector3 endPosition)
@@ -170,5 +243,19 @@ public class PlayerLook : MonoBehaviour
     void SlerpCameraToRotation(Transform transformToMove, Transform targetTransform)
     {
         transformToMove.rotation = Quaternion.Slerp(transformToMove.rotation, targetTransform.rotation, rotationSpeed * Time.deltaTime);
+    }
+
+    void ToggleSpineReady()
+    {
+        spineReady = !spineReady;
+    }
+
+    void CanSit()
+    {
+        canSit = true;
+    }
+    void CantSit()
+    {
+        canSit = false;
     }
 }

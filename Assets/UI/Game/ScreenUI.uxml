@@ -41,6 +41,18 @@
             </ui:VisualElement>
             <ui:VisualElement name="BottomContainer" style="flex-grow: 1; height: 5%; min-width: auto; min-height: auto; align-items: center;">
                 <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BottomLabel" style="align-items: auto; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.62); letter-spacing: 2px;" />
+                <ui:VisualElement name="StatChangeContainer" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Drain Modifier:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DrainLabel" class="bottomLabel" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DrainModifierLabel" class="bottomLabel" style="-unity-text-align: middle-right;" />
+                    <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ConfirmButton" class="ConfirmButton--Out ConfirmButton--In" />
+                    <ui:Label tabindex="-1" text="Stamina Regen:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StamRegen" class="bottomLabel" style="-unity-text-align: middle-left;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StamRegenLabel" class="bottomLabel" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ScoliosisModeContainer" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; visibility: visible;">
+            <ui:VisualElement name="ScoliosisContainer" class="ScoliosisContainer--Down ScoliosisContainer--Up" style="visibility: visible;">
+                <ui:Label tabindex="-1" text="SCOLIOSIS MODE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScoliosisText" class="ScoliosisMode-Right ScoliosisMode-Left" style="visibility: visible;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

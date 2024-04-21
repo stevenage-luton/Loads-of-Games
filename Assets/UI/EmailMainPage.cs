@@ -388,6 +388,7 @@ public class EmailMainPage : MonoBehaviour
         m_day = day;
         EnumerateAllEmails(day);
         emaillist.Clear();
+        emailcontainer.Clear();
         FillEmailList(EmptyList);
         emaillist.Rebuild();
     }

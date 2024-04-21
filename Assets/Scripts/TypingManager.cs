@@ -13,8 +13,6 @@ public class TypingManager : MonoBehaviour
 
     string typedSoFar;
 
-
-
     void Start()
     {
         GameEventSystem.instance.onReplyButtonTrigger += UpdateCurrentString;

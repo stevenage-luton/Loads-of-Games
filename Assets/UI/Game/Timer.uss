@@ -1,4 +1,13 @@
-
+.unity-label{
+    -unity-font-definition: url("../Email/GillSansSDF.asset");
+    -unity-text-align:middle-center;
+    font-size: 72px;
+    -unity-font-style: italic;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    color: rgb(235, 235, 235);
+    -unity-text-outline-width: 2px;
+    -unity-text-outline-color: black;
+}
 
 
 .unity-progress-bar__progress {

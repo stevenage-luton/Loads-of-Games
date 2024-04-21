@@ -16,5 +16,5 @@ MonoBehaviour:
   ArmsPosition: {fileID: 11400000, guid: 8d767f6b2913f70438e51120ea2e526e, type: 2}
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
   ComboNickname: Despair
-  StamRegenModifier: 1
-  DrainModifier: 1
+  StamRegenModifier: 0.9
+  DrainModifier: 0.7

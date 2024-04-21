@@ -16,5 +16,5 @@ MonoBehaviour:
   ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
   LegsPosition: {fileID: 11400000, guid: 3b208ae97aeba69408729272a7486ff7, type: 2}
   ComboNickname: The Oblique Mindset
-  StamRegenModifier: 1
-  DrainModifier: 1
+  StamRegenModifier: 1.6
+  DrainModifier: 1.1

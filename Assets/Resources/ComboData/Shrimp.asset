@@ -17,4 +17,4 @@ MonoBehaviour:
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
   ComboNickname: The Shrimp
   StamRegenModifier: 1.1
-  DrainModifier: 1.5
+  DrainModifier: 1.6

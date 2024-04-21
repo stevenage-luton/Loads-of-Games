@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7aeb312718d5543bc4865909fa36dd, type: 3}
+  m_Name: FailureCutscene
+  m_EditorClassIdentifier: 
+  cutscene:
+  - {fileID: 11400000, guid: 03f0dc365a8c47a47a8213726299a645, type: 2}
+  - {fileID: 11400000, guid: ab181bec3fbae004591fe33e5ce5757a, type: 2}
+  - {fileID: 11400000, guid: a01e55cb77ecee548a3f23ffe37d5687, type: 2}
+  - {fileID: 11400000, guid: 86e1290a44acf52478c2ba906e688013, type: 2}

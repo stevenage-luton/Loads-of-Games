@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GunMixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 55c27753d2752b64084f45bed5870dc1
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 55c27753d2752b64084f45bed5870dc1
+  m_Children: []
+  m_Volume: 372a4b7061c1b1c4d8498b52dfcd5e71
+  m_Pitch: 632a6b73b202b7f4fa1b183fd2a24cc6
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 7c2f428d459fee84ea81f1c1203e88ff
+  m_EffectName: Attenuation
+  m_MixLevel: 9eca606939cef2e4eb1b00314889ed72
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: b8fd3a3f117efd74fae09e86adca4114
+  m_FloatValues:
+    0fabf90070d6553409a47a9c3b5ecbf9: 1.1
+    32c612d24b049a741a9d7a130c5507f2: 250
+    eac6c636fa729834dadade60bfc25edf: -0
+    2ab7de5731ce5114aa12ae5236d691f5: 91.1
+    039656ba9295a614cbee89ae5cdc752a: 74
+    b43f2b1b229f9454d834f2ab057ac973: -4
+    280f234c8f1cd9840901e55cce99aa5a: 25
+    83dd254d7b1052d438926cba34e3c387: 0.32
+  m_TransitionOverrides: {}

@@ -16,5 +16,5 @@ MonoBehaviour:
   ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
   ComboNickname: Impending Disc Herniation
-  StamRegenModifier: 1
-  DrainModifier: 1
+  StamRegenModifier: 1.5
+  DrainModifier: 1.3

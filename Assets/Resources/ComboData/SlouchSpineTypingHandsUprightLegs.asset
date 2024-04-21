@@ -16,5 +16,5 @@ MonoBehaviour:
   ArmsPosition: {fileID: 11400000, guid: d8a7b4d2410022a48a00df31ff2e72c7, type: 2}
   LegsPosition: {fileID: 11400000, guid: 784dba8ccbb1bfb45ab51a7b1d41c7c6, type: 2}
   ComboNickname: The Oat Milk Special
-  StamRegenModifier: 1
-  DrainModifier: 1
+  StamRegenModifier: 0.9
+  DrainModifier: 0.5

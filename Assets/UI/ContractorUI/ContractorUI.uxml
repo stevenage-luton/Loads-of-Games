@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ContractorUI/ContractorUI.uss?fileID=7433441132597879392&amp;guid=1dce2fd01a3c50f43bcbb98d7da7a1a3&amp;type=3#ContractorUI" />
+    <ui:VisualElement name="ScreenContainer" class="ScreenContainer--black ScreenContainer--clear">
+        <ui:VisualElement name="Crosshair" class="Crosshair--normal" />
+        <ui:VisualElement name="CutsceneBar" style="flex-grow: 1; bottom: 0; right: 0; left: 0; min-width: 100%; min-height: 30%; max-height: 30%; align-items: stretch; justify-content: flex-start; align-self: flex-end; position: absolute;">
+            <ui:Label tabindex="-1" text="ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TextBar" class="textbar--out" style="white-space: normal; padding-top: 10px; padding-right: 100px; padding-bottom: 10px; padding-left: 100px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

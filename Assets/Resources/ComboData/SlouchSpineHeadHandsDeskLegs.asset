@@ -16,5 +16,5 @@ MonoBehaviour:
   ArmsPosition: {fileID: 11400000, guid: 2af16e6a891b7e941aef9c1a645554e1, type: 2}
   LegsPosition: {fileID: 11400000, guid: b4501295ce3c80340a68464b414de8e7, type: 2}
   ComboNickname: Helter Skelter
-  StamRegenModifier: 1
-  DrainModifier: 1
+  StamRegenModifier: 0.5
+  DrainModifier: 0.5

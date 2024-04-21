@@ -19,6 +19,15 @@ public class PlayerMovement : MonoBehaviour
 
     public bool remainStationary = false;
 
+    bool invertControls = false;
+
+    private void Start()
+    {
+        GameEventSystem.instance.onBeginScoliosisMode += ToggleInvertControls;
+        GameEventSystem.instance.onEndScoliosisMode += ToggleInvertControls;
+        GameEventSystem.instance.onDayBegin += SetInvertedControlsOff;
+    }
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, ground);
@@ -30,8 +39,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (remainStationary == false)
         {
+            
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
+
+            if (invertControls)
+            {
+                x = -x;
+                z = -z;
+            }
 
             Vector3 movement = transform.right * x + transform.forward * z;
 
@@ -41,5 +57,15 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         characterController.Move(velocity * Time.deltaTime);
+    }
+
+    void ToggleInvertControls()
+    {
+        invertControls = !invertControls;
+    }
+
+    void SetInvertedControlsOff(int day)
+    {
+        invertControls = false;
     }
 }

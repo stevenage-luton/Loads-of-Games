@@ -16,13 +16,13 @@ TagManager:
   - Ground
   - Interact
   - ScreenUI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Character
+  - FloatingText
+  - Skybox
+  - InteractedItem
+  - Light
+  - Bullet
+  - BulletTarget
   - 
   - 
   - 
