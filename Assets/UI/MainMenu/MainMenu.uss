@@ -1,0 +1,114 @@
+#Background {
+    background-color: black;
+    padding: 5% 10% 5% 10%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.button-container {
+    width: 150px;
+    height: 150px;
+    flex-grow: 0;
+    border-width: 5px;
+    border-color: white;
+    margin: 25px;
+    transition-duration: 0s;
+    transition-timing-function: ease-in-sine;
+}
+
+.level-button {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0);
+}
+
+#EmailGameButton {
+    background-image: url('project://database/Assets/UI/MainMenu/ClydeIcon.png?fileID=2800000&guid=9b7b5eb6c92adb647a5fb0c904f19c70&type=3#ClydeIcon');
+}
+
+#EmailGameButton:hover {
+    background-image: url('project://database/Assets/UI/MainMenu/ClydeSelected.png?fileID=2800000&guid=c13c6a332059f7b43bbbeeed6483f177&type=3#ClydeSelected');
+}
+
+#ContractorButton {
+    background-image: url('project://database/Assets/UI/MainMenu/Gun.png?fileID=2800000&guid=320d3f09ee031b84ba8895965b07c343&type=3#Gun');
+}
+
+#ContractorButton:hover {
+    background-image: url('project://database/Assets/UI/MainMenu/GunInvert.png?fileID=2800000&guid=e3e633a92f384b148a32ae7f6d6c8741&type=3#GunInvert');
+}
+
+.button-container--out {
+    flex-wrap: wrap;
+    opacity: 0;
+    transition-duration: 0.3s, 0s;
+    transition-timing-function: ease-in-sine, ease;
+    transition-property: all, position;
+}
+
+.button-container--in {
+    flex-wrap: wrap;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 500px;
+    height: 500px;
+}
+
+.text--in {
+    flex-grow: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition-duration: 1s;
+}
+
+.text--out {
+    translate: 0 -100%;
+}
+
+.AcceptButton {
+}
+
+.AcceptButtonNew:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.AcceptButtonNew {
+    max-width: 500px;
+    max-height: 200px;
+    width: 500px;
+    height: 100px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left-color: rgb(171, 171, 171);
+    border-right-color: rgb(171, 171, 171);
+    border-top-color: rgb(171, 171, 171);
+    border-bottom-color: rgb(171, 171, 171);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    background-color: rgb(255, 255, 255);
+    -unity-font-definition: url('project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&guid=5feea4d32af115344a12b903451f7d5a&type=2#GillSansSDF');
+    font-size: 46px;
+}

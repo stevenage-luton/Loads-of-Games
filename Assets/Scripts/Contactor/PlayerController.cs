@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     bool firstNote;
 
+    bool canQuit = false;
+
     public enum PlayerState
     {
         Movement,
@@ -48,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-
+        canQuit = false;
     }
 
     void Start()
@@ -70,6 +73,7 @@ public class PlayerController : MonoBehaviour
         ContractorEventSystem.instance.onPlayerTeleportToToilet += SwitchStationaryMode;
         ContractorEventSystem.instance.onExitLevelTrigger += SwitchStationaryMode;
         ContractorEventSystem.instance.onPickUpGunTrigger += PickUpGun;
+        ContractorEventSystem.instance.onExitLevelTrigger += UpdateQuit;
 
     }
 
@@ -113,6 +117,13 @@ public class PlayerController : MonoBehaviour
 
             case PlayerState.Stationary:
                 movementController.ClampCameraRotation();
+                if (Input.GetButtonDown("Cancel"))
+                {
+                    if (canQuit)
+                    {
+                        SceneManager.LoadScene("MainMenu");
+                    }
+                }
                 break;
             case PlayerState.Menu:
 
@@ -374,6 +385,11 @@ public class PlayerController : MonoBehaviour
                 ChangeAllLayerMasks(child.gameObject, layerMask);
 
         }
+    }
+
+    void UpdateQuit()
+    {
+        canQuit = true;
     }
 
 }

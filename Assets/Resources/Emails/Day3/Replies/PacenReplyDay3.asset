@@ -10,31 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
-  m_Name: NolanEmail4
+  m_Name: PacenReplyDay3
   m_EditorClassIdentifier: 
   EmailUser: {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
   Recipient:
-  - {fileID: 11400000, guid: 7f868c1946d39f14aac058a605056c3d, type: 2}
-  - {fileID: 11400000, guid: 687601ef438c2dc46a17152124afb783, type: 2}
-  Subject: 'Thread: Possible Ghost?'
-  EmailBody: 'Hey Geoff,
-
-
-    I know you have experience with this sort of thing,
-    what do you make of Nolan''s report?
-
-
-    Regards,
-
-
-    Clyde'
+  - {fileID: 11400000, guid: 292db2b6bc668d143b231e7bf6965f4b, type: 2}
+  Subject: 'RE: ghosts'
+  EmailBody: Try turning the screen off and on again Pacen.
   time: 09:00
   hasReply: 0
   replied: 0
   reply: {fileID: 0}
   nextInThread:
-  - {fileID: 11400000, guid: 2969ea9e996046e459f51db6d93d6852, type: 2}
-  - {fileID: 11400000, guid: 0503db132677ebe47a2056e97e2f4c0d, type: 2}
+  - {fileID: 11400000, guid: 17473a0ca8c446f40a42a4bd3eda4594, type: 2}
   threadTime: 0
   minTime: 0
   maxTime: 0

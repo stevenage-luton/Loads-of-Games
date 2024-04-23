@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLook : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class PlayerLook : MonoBehaviour
 
     private bool canSit = true;
 
+    bool canQuit = false;
+
     AudioSource nullSound;
 
     public enum State
@@ -51,6 +54,7 @@ public class PlayerLook : MonoBehaviour
 
     void Start()
     {
+        canQuit = false;
         state = State.Movement;
         GameEventSystem.instance.onComputerInteract += ComputerMode;
         GameEventSystem.instance.onEndInteract += EndComputerMode;
@@ -61,6 +65,8 @@ public class PlayerLook : MonoBehaviour
         GameEventSystem.instance.onRecieveSpineReadySignal += ToggleSpineReady;
         GameEventSystem.instance.onBeginScoliosisMode += CantSit;
         GameEventSystem.instance.onEndScoliosisMode += CanSit;
+
+        GameEventSystem.instance.onEndGame += UpdateQuit;
 
         nullSound = GetComponent<AudioSource>();
 
@@ -159,6 +165,14 @@ public class PlayerLook : MonoBehaviour
 
             case State.DayInterlude:
                 Cursor.lockState = CursorLockMode.Confined;
+                if (canQuit)
+                {
+                    if (Input.GetButtonDown("Cancel"))
+                    {
+                        SceneManager.LoadScene("MainMenu");
+                    }
+                }
+                
 
                 break;
 
@@ -257,5 +271,9 @@ public class PlayerLook : MonoBehaviour
     void CantSit()
     {
         canSit = false;
+    }
+    void UpdateQuit()
+    {
+        canQuit = true;
     }
 }

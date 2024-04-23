@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
+  m_Name: FuktInfo1
+  m_EditorClassIdentifier: 
+  EmailUser: {fileID: 11400000, guid: 22c24551fbe6faa44825bd554abd7ec4, type: 2}
+  Recipient:
+  - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
+  Subject: 'FWD: Fukt Tracking Info'
+  EmailBody: 'Hello Mr. Thunderpants,
+
+
+    I wanted to update you on a situation
+    regarding the tracking information for a package we''re due to ship out for Fukt
+    Microelectronics for the next TLI launch window. They''d entered some info wrong
+    on the declaration form and got a bit lost in the system, so they''ve probably
+    not received any tracking information. We''ve had to try and work it all out
+    by hand.
+
+
+    If they complain, tell them the tracking number is FK2160004-LT.
+    We''ve slapped a tracker on it and it''s going out next month.
+
+
+    Regards,
+
+
+    Sandra
+    Bacon
+
+'
+  time: 08:35
+  hasReply: 0
+  replied: 0
+  reply: {fileID: 0}
+  nextInThread: []
+  threadTime: 0
+  minTime: 0
+  maxTime: 0

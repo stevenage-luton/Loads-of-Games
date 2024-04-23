@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd4391873d311ff4da3516f0ff722eae, type: 3}
-  m_Name: Victory_07
+  m_Name: EmailEnd03
   m_EditorClassIdentifier: 
-  m_duration: 5
-  Line: '"We''ll talk about that later. See you soon."'
+  m_duration: 4
+  Line: The constant threat of death looms over all of you. The gunmen use you as
+    hostages to prevent Security from storming the Admin Department.

@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4391873d311ff4da3516f0ff722eae, type: 3}
-  m_Name: Victory_07
+  m_Script: {fileID: 11500000, guid: 609c36a4ae5a1b440b643994d666927a, type: 3}
+  m_Name: Sandra
   m_EditorClassIdentifier: 
-  m_duration: 5
-  Line: '"We''ll talk about that later. See you soon."'
+  EmailUserName: Sandra Bacon
+  EmailAddress: sandrabacon@shippingandreceiving.meridian.net
+  PortraitImage: {fileID: 21300000, guid: efe2c62af2d82e64e81f237fb398ea56, type: 3}

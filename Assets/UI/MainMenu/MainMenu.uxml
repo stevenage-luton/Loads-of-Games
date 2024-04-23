@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=a6534d00990e3be4888ac8040bad0b70&amp;type=3#MainMenu" />
+    <ui:VisualElement name="Background" style="flex-direction: row; justify-content: space-around;">
+        <ui:VisualElement name="EmptyIcon" class="button-container">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="EmailGameButton" class="level-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="EmptyIcon" class="button-container">
+            <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ContractorButton" class="level-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+        <ui:VisualElement name="EmptyIcon" class="button-container" style="flex-wrap: wrap;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Text" class="text--in text--out">
+        <ui:VisualElement name="TopBar" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="&quot;Miserable Clyde&apos;s Adventures in Customer Service&quot;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GameText" style="flex-shrink: 1; flex-grow: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; color: rgb(255, 255, 255); -unity-font: url(&apos;project://database/Assets/UI/Email/Gill%20Sans.otf?fileID=12800000&amp;guid=8fb4f22e9c2333249a2582cc2f1d632a&amp;type=3#Gill Sans&apos;); -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); font-size: 92px; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Middle" style="flex-grow: 1; height: 70%; flex-direction: row-reverse;">
+            <ui:VisualElement name="HalfContainer" style="flex-grow: 1; flex-direction: row; min-width: auto; min-height: auto;">
+                <ui:VisualElement name="Labels" style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="Name:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Name" style="flex-shrink: 1; flex-grow: 0; -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); color: rgb(255, 255, 255); font-size: 56px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; -unity-font-style: bold; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                    <ui:Label tabindex="-1" text="Clyde Thunderpants" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NameText" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 20px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; font-size: 56px; -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); color: rgb(255, 255, 255); flex-shrink: 1; white-space: normal;" />
+                    <ui:Label tabindex="-1" text="Occupation:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Occupation" style="flex-shrink: 1; flex-grow: 0; color: rgb(255, 255, 255); -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); font-size: 56px; margin-top: 20px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; -unity-font-style: bold; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                    <ui:Label tabindex="-1" text="Administrative Technician: Meridian Station" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OccupationText" style="padding-top: 10px; padding-right: 50px; padding-bottom: 10px; padding-left: 20px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; font-size: 56px; -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); color: rgb(255, 255, 255); white-space: normal;" />
+                    <ui:Label tabindex="-1" text="Objective:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Objective" style="flex-shrink: 0; flex-grow: 0; color: rgb(255, 255, 255); font-size: 52px; -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); margin-top: 20px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; -unity-font-style: bold; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                    <ui:Label tabindex="-1" text="Sit at your desk. Answer emails until the work day ends. Go home. Repeat." parse-escape-sequences="true" display-tooltip-when-elided="true" name="ObjectiveText" style="padding-top: 10px; padding-right: 50px; padding-bottom: 10px; padding-left: 20px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; font-size: 56px; -unity-font-definition: url(&apos;project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&amp;guid=5feea4d32af115344a12b903451f7d5a&amp;type=2#GillSansSDF&apos;); color: rgb(255, 255, 255); white-space: normal; flex-shrink: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="AcceptButtonContainer" style="flex-grow: 1; width: 80%; flex-direction: column-reverse; min-width: auto; min-height: auto; padding-right: 10%; padding-left: 10%; padding-bottom: 70px;">
+                <ui:Button text="Accept Assignment" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AcceptButton" class="AcceptButtonNew" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -12,7 +12,7 @@ public class GameUI : MonoBehaviour
     private ProgressBar timerBar;
 
     private float startTime = 30.0f;
-    private float time;
+
 
     [SerializeField]
     VisualTreeAsset m_DayEndTemplate;
@@ -31,9 +31,11 @@ public class GameUI : MonoBehaviour
 
     private VisualElement ScoliosisTextContainer;
 
+    private VisualElement NewsPaperContainer;
+
     public GameController controller;
 
-    Label DayText, ArmsText, TorsoText, LegsText, ComboNickname, SpineReminder, DrainLabel, RegenLabel, ScoliosisMode;
+    Label DayText, ArmsText, TorsoText, LegsText, ComboNickname, SpineReminder, DrainLabel, RegenLabel, ScoliosisMode, DayEndLabel;
 
     Button EndDayButton, PlusOneLegButton, MinusOneLegButton, PlusOneTorsoButton, MinusOneTorsoButton, PlusOneArmsButton, MinisOneArmsButton, ConfirmComboButton;
 
@@ -42,10 +44,15 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     AudioClip introScratch, outroScratch;
 
+    int cutsceneIncrement = 0;
+
+    [SerializeField]
+    EndingCutsceneData emailEnding;
+
     // Start is called before the first frame update
     void Start()
     {
-        time = startTime;
+        cutsceneIncrement = 0;
         _uiDocument.panelSettings.sortingOrder = -1;
 
         root = _uiDocument.rootVisualElement;
@@ -66,8 +73,11 @@ public class GameUI : MonoBehaviour
 
         dayEndElement = root.Q<VisualElement>("LevelEndScreen");
         DayText = dayEndElement.Q<Label>("EmailsAnswered");
+        DayEndLabel = dayEndElement.Q<Label>("dayEndMessage");
 
         EndDayButton = dayEndElement.Q<Button>("EndDayButton");
+
+        NewsPaperContainer = dayEndElement.Q<VisualElement>("NewsPaperBackground");
 
         ArmsText = SpineButtonsElement.Q<Label>("ArmsDescription");
         TorsoText = SpineButtonsElement.Q<Label>("TorsoDescription");
@@ -97,6 +107,8 @@ public class GameUI : MonoBehaviour
 
         timerBar.highValue = controller.maxSpineHealth;
 
+        NewsPaperContainer.style.display = DisplayStyle.None;
+
         GameEventSystem.instance.onDayEnd += DeleteOldBar;
         GameEventSystem.instance.onDayBegin += AddNewBar;
         GameEventSystem.instance.onSpineModeButton += EnterSpineModeUI;
@@ -107,6 +119,8 @@ public class GameUI : MonoBehaviour
 
         GameEventSystem.instance.onBeginScoliosisMode += AnimateScoliosis;
         GameEventSystem.instance.onEndScoliosisMode += StopScoliosis;
+
+        GameEventSystem.instance.onEndGame += FadeInCutScene;
 
         audioSource = GetComponent<AudioSource>();
 
@@ -290,5 +304,47 @@ public class GameUI : MonoBehaviour
     {
         ScoliosisMode.ToggleInClassList("ScoliosisMode-Left");
         ScoliosisTextContainer.ToggleInClassList("ScoliosisContainer--Up");
+    }
+
+    void FadeInCutScene()
+    {
+        DayText.RemoveFromClassList("textbar--in");
+        EndDayButton.style.display = DisplayStyle.None;
+        DayEndLabel.style.display = DisplayStyle.None;
+        NewsPaperContainer.style.display = DisplayStyle.Flex;
+        StartCoroutine(EndingCutscene());
+    }
+
+    IEnumerator EndingCutscene()
+    {
+        if (cutsceneIncrement == 0)
+        {
+            yield return new WaitForSeconds(4.5f);
+        }
+
+        DayText.text = emailEnding.cutscene[cutsceneIncrement].Line;
+        DayText.AddToClassList("textbar--in");
+
+        yield return new WaitForSeconds(emailEnding.cutscene[cutsceneIncrement].fullDuration);
+
+        DayText.RemoveFromClassList("textbar--in");
+
+        yield return new WaitForSeconds(2.5f);
+
+        cutsceneIncrement++;
+
+        if (cutsceneIncrement < emailEnding.cutscene.Count)
+        {
+            StartCoroutine(EndingCutscene());
+        }
+        else
+        {
+            SpawnNewsPaper();
+        }
+    }
+
+    void SpawnNewsPaper()
+    {
+        NewsPaperContainer.AddToClassList("newspaper--in");
     }
 }

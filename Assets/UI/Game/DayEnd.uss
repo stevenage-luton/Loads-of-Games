@@ -1,43 +1,79 @@
-#background{
-	background-color:black;
-    flex-grow:1;
+#background {
+    background-color: black;
+    flex-grow: 1;
 }
 
-.unity-label{
-        margin:0px;
-        -unity-font-definition: url("../Email/GillSansSDF.asset");
-        color:white;
+.unity-label {
+    margin: 0;
+    -unity-font-definition: url('project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&guid=5feea4d32af115344a12b903451f7d5a&type=2#GillSansSDF');
+    color: white;
 }
 
-#dayEndMessage{
-    align-self:center;
+#dayEndMessage {
+    align-self: center;
     font-size: 32px;
-    padding-top:30px;
-    flex-grow:1;
+    padding-top: 30px;
+    flex-grow: 1;
 }
 
-#EmailsAnswered{
-    align-self:center;
+#EmailsAnswered {
+    align-self: center;
     font-size: 32px;
-    padding-top:30px;
-    flex-grow:1;
+    padding-top: 30px;
+    flex-grow: 1;
 }
 
 #EndDayButton {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-direction: row;
-        justify-content: flex-start;
-        background-color: rgb(235, 235, 235);
-        border-width: 10px;
-        border-color: rgb(180, 180, 180);
-        max-height: 100px;
-        min-height: 75px;
-        margin:0px;
-        padding: 10px;
-        width: 100%;
-        -unity-font-definition: url("../Email/GillSansSDF.asset");
-        align-self:center;
-        font-size: 32px;
-        -unity-text-align:middle-center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(235, 235, 235);
+    border-width: 10px;
+    border-color: rgb(180, 180, 180);
+    max-height: 100px;
+    min-height: 75px;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    -unity-font-definition: url('project://database/Assets/UI/Email/GillSansSDF.asset?fileID=11400000&guid=5feea4d32af115344a12b903451f7d5a&type=2#GillSansSDF');
+    align-self: center;
+    font-size: 32px;
+    -unity-text-align: middle-center;
+}
+
+.textbar--out {
+    white-space: normal;
+    padding-right: 50px;
+    padding-left: 50px;
+    transition-duration: 0s;
+    transition-timing-function: ease-in-out-sine;
+    opacity: 0;
+}
+
+.textbar--in {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-timing-function: ease-out-sine;
+}
+
+.newspaper--out {
+    flex-grow: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(228, 216, 199);
+    background-image: none;
+    align-items: center;
+    justify-content: space-around;
+    align-self: center;
+    transition-duration: 2s;
+    opacity: 0;
+}
+
+.newspaper--in {
+    opacity: 1;
+    transition-duration: 2s;
 }

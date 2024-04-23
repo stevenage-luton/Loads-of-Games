@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     public float timeSinceLastSeatChange = 0.0f;
     public float minTimeBetweenSeatChanges = 5.0f;
 
+    public int finalDay = 4;
+    float endGameTimer;
+
     public int sentEmails;
 
     public int day;
@@ -60,6 +63,10 @@ public class GameController : MonoBehaviour
         GameEventSystem.instance.onComputerInteract += SitDown;
         GameEventSystem.instance.onEndInteract += StandUp;
 
+        GameEventSystem.instance.onEndGame += StopTicking;
+        GameEventSystem.instance.onEndGame += StandUp;
+
+        endGameTimer = 0;
 
         Player = GameObject.FindGameObjectWithTag("Player");
         PlayerStart = GameObject.FindGameObjectWithTag("PlayerStart");
@@ -125,6 +132,14 @@ public class GameController : MonoBehaviour
         {
             GameEventSystem.instance.EndScoliosisMode();
             scoliosisEndValue = 0.0f;
+        }
+
+        if (endGameTimer != 0)
+        {
+            if (dayTime >= endGameTimer)
+            {
+                GameEventSystem.instance.EndGame();
+            }
         }
 
         if (dayTime >= dayDuration)
@@ -198,6 +213,15 @@ public class GameController : MonoBehaviour
             email.replied = false;
             AddNewEmailToThread(email);
         }
+        if (finalDay == day)
+        {
+            endGameTimer = Random.Range(10.0f, 20.0f);
+        }
+
+        //if (finalDay == day)
+        //{
+        //    endGameTimer = Random.Range(maxSpineHealth, dayDuration - 60.0f);
+        //}
     }
 
     float GenerateRandomTime(float minTime, float maxTime)

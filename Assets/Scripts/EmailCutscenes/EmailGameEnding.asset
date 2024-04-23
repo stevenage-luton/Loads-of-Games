@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad7aeb312718d5543bc4865909fa36dd, type: 3}
-  m_Name: FailureCutscene
+  m_Name: EmailGameEnding
   m_EditorClassIdentifier: 
   cutscene:
-  - {fileID: 11400000, guid: 03f0dc365a8c47a47a8213726299a645, type: 2}
-  - {fileID: 11400000, guid: ab181bec3fbae004591fe33e5ce5757a, type: 2}
-  - {fileID: 11400000, guid: a01e55cb77ecee548a3f23ffe37d5687, type: 2}
-  - {fileID: 11400000, guid: a01e55cb77ecee548a3f23ffe37d5687, type: 2}
-  - {fileID: 11400000, guid: a01e55cb77ecee548a3f23ffe37d5687, type: 2}
+  - {fileID: 11400000, guid: 6d7fb82f3a0c54b4c9c74d3bcd6c6d58, type: 2}
+  - {fileID: 11400000, guid: 6b1a81991be7a43468cb20ccf3a9aeed, type: 2}
+  - {fileID: 11400000, guid: 60f58cdcd78d70f4b97335269ba9ae32, type: 2}
+  - {fileID: 11400000, guid: ba89804ca36a1cc4eabb7d0fcba69247, type: 2}

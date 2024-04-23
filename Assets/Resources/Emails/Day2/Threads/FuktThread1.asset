@@ -10,26 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b71f6b4cff1ad5840852fc7fd742a4d0, type: 3}
-  m_Name: 2_FuktMail
+  m_Name: FuktThread1
   m_EditorClassIdentifier: 
   EmailUser: {fileID: 11400000, guid: 579ea17465eecc148b4bf8f5a8deac3c, type: 2}
   Recipient:
   - {fileID: 11400000, guid: 2b13a3b4231c69e459934a08edc6d91e, type: 2}
-  Subject: Priority Shipment Tracking Information
-  EmailBody: 'Hello Mr. Thunderpants.
+  Subject: 'Thread: Priority Shipment Tracking Information'
+  EmailBody: 'Hello Mr. Thunderpants,
 
 
-    We are exporting a shipment of matter-manipulators
-    to Space Station One, due for arrival by May. The client is paying for priority
-    shipment this time.
-
-
-    Can you please confirm that our package is marked as
-    priority and provide us with tracking information?'
-  time: 09:16
+    Perfect, thanks.'
+  time: 09:00
   hasReply: 0
   replied: 0
-  reply: {fileID: 11400000, guid: da74a4af5c451f84e8af345d662d99c0, type: 2}
+  reply: {fileID: 0}
   nextInThread: []
   threadTime: 10
   minTime: 0

@@ -2695,6 +2695,7 @@ MonoBehaviour:
   controller: {fileID: 1410124047}
   introScratch: {fileID: 8300000, guid: 1a575b0ddbda46b48b3db53c69c0ad88, type: 3}
   outroScratch: {fileID: 8300000, guid: 15fcdf7d340f0194492d82a556898ea9, type: 3}
+  emailEnding: {fileID: 11400000, guid: 55e0c2757a011864e9081d0b6630c935, type: 2}
 --- !u!114 &1053564704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3541,6 +3542,7 @@ MonoBehaviour:
   maxSpineHealth: 60
   timeSinceLastSeatChange: 0
   minTimeBetweenSeatChanges: 5
+  finalDay: 4
   sentEmails: 0
   day: 0
   dayTime: 0

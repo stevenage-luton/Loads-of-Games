@@ -223,4 +223,18 @@ public class GameEventSystem : MonoBehaviour
         }
     }
 
+    public event Action onEndGame;
+
+    public void EndGame()
+    {
+        if (onDayEnd != null)
+        {
+            onDayEnd.Invoke();
+        }
+        if (onEndGame != null)
+        {
+            onEndGame.Invoke();
+        }
+    }
+
 }
