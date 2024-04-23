@@ -27,6 +27,11 @@ public class MainMenuScript : MonoBehaviour
 
     bool onMenu;
 
+    private void Awake()
+    {
+        UnityEngine.Cursor.lockState = CursorLockMode.Confined;
+    }
+
     void Start()
     {
         UnityEngine.Cursor.lockState = CursorLockMode.Confined;
